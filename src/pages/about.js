@@ -1,11 +1,18 @@
 import React from "react"
 import Header from "../components/header"
+import Nav from "../components/nav"
+import Layout from "../components/layout"
 
 export default function About() {
   return (
-    <div style={{ color: `teal` }}>
-      <Header headerText="about page" />
-      <p>Such wow. Very React.</p>
-    </div>
+    <>
+      <Nav />
+      <Layout>
+        <section className="about_wrap">
+          <Header headerText="about page" />
+          <p>This is the about page</p>
+        </section>
+      </Layout>
+    </>
   )
 }
