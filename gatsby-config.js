@@ -7,7 +7,22 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Mike Hansen's Portfolio`,
+    title: `Mike Hansen`,
   },
-  plugins: [],
+  plugins: [
+    // `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    },
+  ],
 }

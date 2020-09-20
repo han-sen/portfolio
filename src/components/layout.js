@@ -1,12 +1,7 @@
 import React from "react"
+import "../styles/global.scss"
+import styles from "../styles/layout.module.scss"
 
 export default function Layout({ children }) {
-  return (
-    <section
-      style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}
-      className="layout_wrap"
-    >
-      {children}
-    </section>
-  )
+  return <section className={styles.layout_wrap}>{children}</section>
 }

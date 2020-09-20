@@ -1,0 +1,16 @@
+@use "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 1px solid gold;
+}
+
+html {
+  background-color: #fefefe69;
+  color: variables.$primary-color;
+}
+
+body {
+  font-family: variables.$font-stack;
+}
