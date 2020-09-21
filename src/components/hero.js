@@ -1,13 +1,13 @@
 import React from "react"
 import Header from "../components/header"
-import styles from "../styles/hero.module.scss"
+import styles from "../styles/components/hero.module.scss"
 
 export default function Hero() {
   return (
     <section className={styles.hero_wrap}>
       <div className={styles.hero_inner}>
         <div className={styles.hero_headline}>
-          <Header headerText="Front-End Developer & Designer" />
+          <Header headerText="Mike Hansen" />
         </div>
         <div className={styles.hero_splash}>
           <div className={styles.hero_splash_inner}>
