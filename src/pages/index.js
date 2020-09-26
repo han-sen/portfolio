@@ -19,7 +19,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query MyQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { frontmatter: { post_type: { eq: "blog" } } }) {
       edges {
         node {
           frontmatter {
@@ -28,6 +28,9 @@ export const query = graphql`
           }
           html
           excerpt
+          fields {
+            slug
+          }
         }
       }
     }
