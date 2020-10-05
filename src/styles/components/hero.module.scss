@@ -7,3 +7,14 @@
   box-shadow: -4px 4px tan;
   margin-left: 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .hero_inner {
+    flex-direction: column;
+  }
+  .hero_selfie {
+    max-width: 100%;
+    box-shadow: -4px 4px tan;
+    margin: 0.5rem;
+  }
+}

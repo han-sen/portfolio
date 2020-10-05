@@ -1,0 +1,19 @@
+@use "../variables";
+
+.blog_article_wrap {
+  margin: 1rem 0;
+}
+
+.blog_date {
+  font-family: variables.$font-accent;
+  font-size: 0.8rem;
+}
+
+.blog_link {
+  color: tan;
+  text-decoration: none;
+}
+
+.blog_excerpt {
+  font-weight: 300;
+}

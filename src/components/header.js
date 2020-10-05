@@ -9,10 +9,13 @@ export default function Header(props) {
     <>
       <h1 className={styles.header}>{props.headerText}</h1>
       <p className={styles.subheader}>Front-End Dev && Design</p>
-      <a href="https://github.com" className={styles.header_link}>
+      <a href="https://github.com/han-sen" className={styles.header_link}>
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a href="https://github.com" className={styles.header_link}>
+      <a
+        href="https://www.linkedin.com/in/mikehansendev/"
+        className={styles.header_link}
+      >
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </>

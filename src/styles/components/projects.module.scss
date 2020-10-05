@@ -56,3 +56,9 @@
   margin-right: 1rem;
   font-size: 0.8rem;
 }
+
+@media screen and (max-width: 768px) {
+  .projects_outer_wrap {
+    flex-direction: column;
+  }
+}

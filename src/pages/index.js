@@ -17,7 +17,13 @@ export default function Home({ data }) {
         <h2>BLOG</h2>
         <Blog data={data} />
       </Layout>
-      <p style={{ textAlign: "center", margin: "4rem 0" }}>
+      <p
+        style={{
+          textAlign: "center",
+          margin: "4rem 0",
+          fontFamily: "Fira Mono",
+        }}
+      >
         Copyright 2020 Mike Hansen
       </p>
     </>
