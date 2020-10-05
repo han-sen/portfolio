@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../components/header"
 import styles from "../styles/components/hero.module.scss"
+import Selfie from "../assets/img/me-ascii.png"
 
 export default function Hero() {
   return (
@@ -11,10 +12,7 @@ export default function Hero() {
         </div>
         <div className={styles.hero_splash}>
           <div className={styles.hero_splash_inner}>
-            <img
-              src="https://source.unsplash.com/random/400x400"
-              alt="splash art"
-            />
+            <img src={Selfie} alt="splash art" className={styles.hero_selfie} />
           </div>
         </div>
       </div>

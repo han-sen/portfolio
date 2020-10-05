@@ -12,6 +12,7 @@ module.exports = {
   plugins: [
     // `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-fontawesome-css`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {

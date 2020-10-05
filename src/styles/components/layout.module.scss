@@ -1,5 +1,8 @@
 .layout_wrap {
-  margin: 3rem auto;
-  max-width: 650px;
+  margin: 4rem 0 4rem 0;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,2 +1,11 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #212121;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+
+$font-stack: "Roboto", sans-serif;
+$font-accent: "Fira Mono", monospace;
+$primary-color: #eee;
+$body-gradient: linear-gradient(
+  120deg,
+  rgba(10, 25, 47, 1) 0%,
+  rgba(6, 16, 29, 1) 100%
+);

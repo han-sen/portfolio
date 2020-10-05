@@ -1,0 +1,16 @@
+@use "../variables";
+
+.header {
+  font-size: 5em;
+}
+
+.subheader {
+  font-family: variables.$font-accent;
+  margin-bottom: 0.5rem;
+}
+
+.header_link {
+  color: tan;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
