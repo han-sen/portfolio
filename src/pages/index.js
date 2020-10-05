@@ -5,6 +5,7 @@ import Nav from "../components/nav"
 import Hero from "../components/hero"
 import Blog from "../components/blog"
 import Projects from "../components/projects"
+import AboutMe from "../components/AboutMe"
 
 export default function Home({ data }) {
   return (
@@ -14,6 +15,8 @@ export default function Home({ data }) {
         <Hero />
         <h2>PROJECTS</h2>
         <Projects />
+        <h2>ABOUT</h2>
+        <AboutMe />
         <h2>BLOG</h2>
         <Blog data={data} />
       </Layout>
@@ -22,6 +25,7 @@ export default function Home({ data }) {
           textAlign: "center",
           margin: "4rem 0",
           fontFamily: "Fira Mono",
+          color: "#bababa",
         }}
       >
         Copyright 2020 Mike Hansen
