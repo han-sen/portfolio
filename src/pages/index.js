@@ -13,7 +13,6 @@ export default function Home({ data }) {
       {/* <Nav /> */}
       <Layout>
         <Hero />
-        <h2>PROJECTS</h2>
         <Projects data={data} />
         <h2>ABOUT</h2>
         <AboutMe />
@@ -36,7 +35,10 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query MyQuery {
-    allMarkdownRemark(filter: { frontmatter: {} }) {
+    allMarkdownRemark(
+      filter: { frontmatter: {} }
+      sort: { fields: frontmatter___date }
+    ) {
       edges {
         node {
           id
@@ -49,6 +51,7 @@ export const query = graphql`
             github
             liveLink
             tags
+            icon
           }
           html
           excerpt

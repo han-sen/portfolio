@@ -1,9 +1,13 @@
 @use "../variables";
 
 .projects_outer_wrap {
+}
+
+.projects_inner_wrap {
   display: flex;
   flex-wrap: nowrap;
 }
+
 .project_wrap {
   border: 1px solid #eee;
   width: 15rem;

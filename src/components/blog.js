@@ -1,5 +1,4 @@
 import React from "react"
-import PostLink from "./post-link"
 import styles from "../styles/components/blog.module.scss"
 
 export default function Blog(props) {
