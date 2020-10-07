@@ -14,7 +14,7 @@ export default function Home({ data }) {
       <Layout>
         <Hero />
         <h2>PROJECTS</h2>
-        <Projects />
+        <Projects data={data} />
         <h2>ABOUT</h2>
         <AboutMe />
         <h2>BLOG</h2>
@@ -36,13 +36,19 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query MyQuery {
-    allMarkdownRemark(filter: { frontmatter: { post_type: { eq: "blog" } } }) {
+    allMarkdownRemark(filter: { frontmatter: {} }) {
       edges {
         node {
           id
           frontmatter {
             date
             title
+            post_type
+            description
+            feature
+            github
+            liveLink
+            tags
           }
           html
           excerpt

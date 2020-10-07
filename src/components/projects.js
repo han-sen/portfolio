@@ -7,43 +7,46 @@ import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const Projects = () => {
+const Projects = props => {
   return (
     <section className={styles.projects_outer_wrap}>
-      <div className={styles.project_wrap}>
-        <div className={styles.project_inner}>
-          <div className={styles.project_icon_wrap}>
-            <div className={styles.projects_cat}>
-              <FontAwesomeIcon icon={faGamepad} />
-            </div>
-            <div className={styles.project_links}>
-              <a
-                href="https://github.com/han-sen/archers-island"
-                className={styles.project_links_item}
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a
-                href="https://han-sen.github.io/archers-island/"
-                className={styles.project_links_item}
-              >
-                <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
-              </a>
+      {props.data.allMarkdownRemark.edges
+        .filter(({ node }) => node.frontmatter.post_type === "project")
+        .map(({ node }) => (
+          <div className={styles.project_wrap}>
+            <div className={styles.project_inner}>
+              <div className={styles.project_icon_wrap}>
+                <div className={styles.projects_cat}>
+                  <FontAwesomeIcon icon={faGamepad} />
+                </div>
+                <div className={styles.project_links}>
+                  <a
+                    href={node.frontmatter.github}
+                    className={styles.project_links_item}
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                  <a
+                    href={node.frontmatter.liveLink}
+                    className={styles.project_links_item}
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+                  </a>
+                </div>
+              </div>
+              <h3 className={styles.project_title}>{node.frontmatter.title}</h3>
+              <p className={styles.project_desc}>
+                {node.frontmatter.description}
+              </p>
+              <ul className={styles.project_stack}>
+                {node.frontmatter.tags.map(tag => (
+                  <li className={styles.project_stack_item}>{tag}</li>
+                ))}
+              </ul>
             </div>
           </div>
-          <h3 className={styles.project_title}>Archer's Island</h3>
-          <p className={styles.project_desc}>
-            A canvas-based archery tournament where players battle for the last
-            piece of land in sight.
-          </p>
-          <ul className={styles.project_stack}>
-            <li className={styles.project_stack_item}>JS</li>
-            <li className={styles.project_stack_item}>Canvas</li>
-            <li className={styles.project_stack_item}>CSS</li>
-          </ul>
-        </div>
-      </div>
-      <div className={styles.project_wrap}>
+        ))}
+      {/* <div className={styles.project_wrap}>
         <div className={styles.project_inner}>
           <div className={styles.project_icon_wrap}>
             <div className={styles.projects_cat}>
@@ -99,8 +102,8 @@ const Projects = () => {
           </div>
           <h3 className={styles.project_title}>Bantm</h3>
           <p className={styles.project_desc}>
-            A twitter/instagram clone where users can share pictures and short
-            messages, as well as customize their page.
+            Social media pp where users can share messages & customize their
+            page.
           </p>
           <ul className={styles.project_stack}>
             <li className={styles.project_stack_item}>React</li>
@@ -108,7 +111,7 @@ const Projects = () => {
             <li className={styles.project_stack_item}>Node</li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
+import styles from "../styles/components/blog_post.module.scss"
 
 export default function BlogPost({ data }) {
   const post = data.markdownRemark
@@ -9,10 +10,15 @@ export default function BlogPost({ data }) {
     <>
       <Layout>
         <Hero />
-        <div style={{ maxWidth: "90%" }}>
-          <h1>{post.frontmatter.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
+        <section className={styles.blog_article_wrap}>
+          <h1 className={styles.blog_article_title}>
+            {post.frontmatter.title}
+          </h1>
+          <div
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            className={styles.blog_post_body}
+          />
+        </section>
       </Layout>
     </>
   )
