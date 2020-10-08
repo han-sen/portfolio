@@ -14,10 +14,12 @@ export default function BlogPost({ data }) {
           <h1 className={styles.blog_article_title}>
             {post.frontmatter.title}
           </h1>
+          <p className={styles.blog_article_date}>{post.frontmatter.date}</p>
           <div
             dangerouslySetInnerHTML={{ __html: post.html }}
             className={styles.blog_post_body}
           />
+          <button>Back to Blog</button>
         </section>
       </Layout>
     </>
@@ -30,6 +32,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
       }
     }
   }

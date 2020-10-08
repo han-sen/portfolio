@@ -1,7 +1,8 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Nav from "../components/nav"
+import Footer from "../components/footer"
 import Hero from "../components/hero"
 import Blog from "../components/blog"
 import Projects from "../components/projects"
@@ -10,7 +11,7 @@ import AboutMe from "../components/AboutMe"
 export default function Home({ data }) {
   return (
     <>
-      {/* <Nav /> */}
+      <Nav />
       <Layout>
         <Hero />
         <Projects data={data} />
@@ -19,22 +20,13 @@ export default function Home({ data }) {
         <h2>BLOG</h2>
         <Blog data={data} />
       </Layout>
-      <p
-        style={{
-          textAlign: "center",
-          margin: "4rem 0",
-          fontFamily: "Fira Mono",
-          color: "#bababa",
-        }}
-      >
-        Copyright 2020 Mike Hansen
-      </p>
+      <Footer />
     </>
   )
 }
 
 export const query = graphql`
-  query MyQuery {
+  query IndexQuery {
     allMarkdownRemark(
       filter: { frontmatter: {} }
       sort: { fields: frontmatter___date }

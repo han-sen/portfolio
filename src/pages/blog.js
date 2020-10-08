@@ -1,12 +1,16 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import Nav from "../components/nav"
+import Footer from "../components/footer"
 import styles from "../styles/components/blog.module.scss"
 
-export default function Blog(props) {
+export default function Blog({ data }) {
   return (
-    <Layout>
-      <section>
-        {props.data.allMarkdownRemark.edges
+    <>
+      <Nav />
+      <Layout>
+        {data.allMarkdownRemark.edges
           .filter(({ node }) => node.frontmatter.post_type === "blog")
           .map(({ node }) => (
             <div key={node.id} className={styles.blog_article_wrap}>
@@ -22,7 +26,33 @@ export default function Blog(props) {
               <p className={styles.blog_excerpt}>{node.excerpt}</p>
             </div>
           ))}
-      </section>
-    </Layout>
+      </Layout>
+      <Footer />
+    </>
   )
 }
+
+export const query = graphql`
+  query BlogQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: {} }
+      sort: { fields: frontmatter___date }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            date
+            title
+            post_type
+          }
+          html
+          excerpt
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`
