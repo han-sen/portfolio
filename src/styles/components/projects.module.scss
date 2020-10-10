@@ -33,14 +33,14 @@
 
 .project_links_item {
   margin-left: 0.5rem;
-  color: tan;
+  color: variables.$primary-color-light;
 }
 
 .project_title {
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: tan;
+  color: variables.$primary-color-light;
 }
 
 .project_desc {
@@ -60,11 +60,12 @@
   font-weight: 300;
   margin-right: 1rem;
   font-size: 0.8rem;
-  color: #bababa;
+  color: variables.$primary-color-light;
 }
 
 @media screen and (max-width: 768px) {
-  .projects_outer_wrap {
+  .projects_outer_wrap,
+  .projects_inner_wrap {
     flex-direction: column;
   }
 }

@@ -1,3 +1,5 @@
+@use "../variables";
+
 .hero_inner {
   display: flex;
   align-items: center;
@@ -5,7 +7,7 @@
 
 .hero_selfie {
   max-width: 12rem;
-  box-shadow: -4px 4px tan;
+  box-shadow: -4px 4px variables.$primary-color-light;
   margin-left: 2rem;
 }
 
@@ -15,7 +17,7 @@
   }
   .hero_selfie {
     max-width: 100%;
-    box-shadow: -4px 4px tan;
+    box-shadow: none;
     margin: 0.5rem;
   }
 }

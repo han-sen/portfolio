@@ -7,11 +7,11 @@
 .blog_date {
   font-family: variables.$font-accent;
   font-size: 0.8rem;
-  color: #bababa;
+  color: variables.$primary-color-light;
 }
 
 .blog_link {
-  color: tan;
+  color: variables.$primary-color-light;
   text-decoration: none;
 }
 

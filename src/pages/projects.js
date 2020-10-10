@@ -31,9 +31,9 @@ export default function Blog({ data }) {
 }
 
 export const query = graphql`
-  query BlogQuery {
+  query ProjectsQuery {
     allMarkdownRemark(
-      filter: { frontmatter: { post_type: { eq: "blog" } } }
+      filter: { frontmatter: { post_type: { eq: "project" } } }
       sort: { fields: frontmatter___date }
     ) {
       edges {
