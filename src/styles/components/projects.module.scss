@@ -36,6 +36,10 @@
   color: variables.$primary-color-light;
 }
 
+.project_image {
+  max-width: 100%;
+}
+
 .project_title {
   font-weight: 700;
   font-size: 1.2rem;

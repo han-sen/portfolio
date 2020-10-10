@@ -40,6 +40,13 @@ const Projects = props => {
                     </a>
                   </div>
                 </div>
+                <img
+                  src={
+                    node.frontmatter.featuredImg.childImageSharp.fluid
+                      .originalImg
+                  }
+                  className={styles.project_image}
+                />
                 <h3 className={styles.project_title}>
                   {node.frontmatter.title}
                 </h3>

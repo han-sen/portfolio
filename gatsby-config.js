@@ -11,6 +11,8 @@ module.exports = {
   },
   plugins: [
     // `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-fontawesome-css`,
     {

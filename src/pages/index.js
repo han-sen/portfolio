@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
@@ -44,6 +45,14 @@ export const query = graphql`
             liveLink
             tags
             icon
+            featuredImg {
+              publicURL
+              childImageSharp {
+                fluid {
+                  originalImg
+                }
+              }
+            }
           }
           html
           excerpt
