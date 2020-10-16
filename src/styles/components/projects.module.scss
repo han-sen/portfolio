@@ -1,28 +1,51 @@
 @use "../variables";
 
 .projects_outer_wrap {
+  min-height: 100vh;
 }
 
 .projects_inner_wrap {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  :nth-child(odd) {
+    .project_inner {
+      flex-direction: row-reverse;
+    }
+    .project_image {
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+  }
+  :nth-child(even) {
+    .project_inner {
+      flex-direction: row;
+    }
+    .project_image {
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+  }
 }
 
 .project_wrap {
-  border: 1px solid #eee;
-  width: 15rem;
-  height: 15rem;
-  padding: 2rem;
-  margin: 0 1rem;
   display: flex;
   flex-direction: column;
+  max-width: 50rem;
+  margin: 2rem 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
 }
 
 .project_inner {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-between;
+}
+
+.project_details_wrap {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .project_icon_wrap {
@@ -37,7 +60,7 @@
 }
 
 .project_image {
-  max-width: 100%;
+  max-width: 66.66666%;
 }
 
 .project_title {

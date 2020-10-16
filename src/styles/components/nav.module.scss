@@ -1,11 +1,13 @@
 @use "../variables";
 
 nav {
-  max-width: 1200px;
+  // max-width: 1200px;
   display: flex;
   align-items: center;
   margin: auto;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
 }
 
 .logo {
@@ -13,8 +15,10 @@ nav {
 }
 
 .dropdown_link_wrap > a {
-  margin-left: 20px;
+  // margin-left: 2rem;
   text-decoration: none;
+  font-family: variables.$font-accent;
+  color: variables.$primary-color;
 }
 
 .dropdown_toggle {

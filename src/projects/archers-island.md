@@ -10,7 +10,7 @@ featuredImg: "../assets/img/archers_island_1.png"
 icon: "faGamepad"
 tags:
   - JS
-  - CANVAS
+  - Canvas
   - CSS
 ---
 

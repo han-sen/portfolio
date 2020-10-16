@@ -1,5 +1,11 @@
 @use "../variables";
 
+.hero_wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
 .hero_inner {
   display: flex;
   align-items: center;

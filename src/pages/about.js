@@ -7,12 +7,10 @@ export default function About() {
   return (
     <>
       <Nav />
-      <Layout>
-        <section className="about_wrap">
-          <Header headerText="about page" />
-          <p>This is the about page</p>
-        </section>
-      </Layout>
+      <section className="about_wrap">
+        <Header headerText="about page" />
+        <p>This is the about page</p>
+      </section>
     </>
   )
 }

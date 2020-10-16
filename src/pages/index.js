@@ -13,14 +13,12 @@ export default function Home({ data }) {
   return (
     <>
       <Nav />
-      <Layout>
-        <Hero />
-        <Projects data={data} />
-        <h2>ABOUT</h2>
-        <AboutMe />
-        <h2>BLOG</h2>
-        <Blog data={data} />
-      </Layout>
+      <Hero />
+      <Projects data={data} />
+      <h2>ABOUT</h2>
+      <AboutMe />
+      <h2>BLOG</h2>
+      <Blog data={data} />
       <Footer />
     </>
   )
