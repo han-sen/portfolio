@@ -1,11 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
 import styles from "../styles/components/blog.module.scss"
 
-export default function Blog({ data }) {
+export default function Projects({ data }) {
   return (
     <>
       <Nav />

@@ -1,12 +1,8 @@
 import React from "react"
 import styles from "../styles/components/projects.module.scss"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faGamepad } from "@fortawesome/free-solid-svg-icons"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
-import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ProjectCategory from "./project-category"
 import ProjectLinks from "./project-links"
+import ProjectImage from "./project-image"
 
 export default function Projects(props) {
   return (
@@ -18,12 +14,11 @@ export default function Projects(props) {
           .map(({ node }, i) => (
             <div className={styles.project_wrap} key={i}>
               <div className={styles.project_inner}>
-                <img
-                  src={
+                <ProjectImage
+                  url={
                     node.frontmatter.featuredImg.childImageSharp.fluid
                       .originalImg
                   }
-                  className={styles.project_image}
                 />
                 <div className={styles.project_details_wrap}>
                   <div className={styles.project_icon_wrap}>
@@ -34,7 +29,9 @@ export default function Projects(props) {
                     />
                   </div>
                   <h3 className={styles.project_title}>
-                    {node.frontmatter.title}
+                    <a href={`/${node.frontmatter.title}`}>
+                      {node.frontmatter.title}
+                    </a>
                   </h3>
                   <p className={styles.project_desc}>
                     {node.frontmatter.description}
