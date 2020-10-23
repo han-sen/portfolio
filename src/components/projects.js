@@ -29,9 +29,7 @@ export default function Projects(props) {
                     />
                   </div>
                   <h3 className={styles.project_title}>
-                    <a href={`/${node.frontmatter.title}`}>
-                      {node.frontmatter.title}
-                    </a>
+                    <a href={`${node.fields.slug}`}>{node.frontmatter.title}</a>
                   </h3>
                   <p className={styles.project_desc}>
                     {node.frontmatter.description}
