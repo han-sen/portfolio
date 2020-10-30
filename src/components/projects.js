@@ -7,19 +7,15 @@ import ProjectImage from "./project-image"
 export default function Projects(props) {
   return (
     <section className={styles.projects_outer_wrap}>
-      <h2>PROJECTS</h2>
+      <div className={styles.section_header_wrap}>
+        <h2 className={styles.project_header}>PROJECTS</h2>
+      </div>
       <div className={styles.projects_inner_wrap}>
         {props.data.allMarkdownRemark.edges
           .filter(({ node }) => node.frontmatter.post_type === "project")
           .map(({ node }, i) => (
             <div className={styles.project_wrap} key={i}>
               <div className={styles.project_inner}>
-                <ProjectImage
-                  url={
-                    node.frontmatter.featuredImg.childImageSharp.fluid
-                      .originalImg
-                  }
-                />
                 <div className={styles.project_details_wrap}>
                   <div className={styles.project_icon_wrap}>
                     <ProjectCategory icon={node.frontmatter.icon} />
@@ -28,6 +24,12 @@ export default function Projects(props) {
                       liveLink={node.frontmatter.liveLink}
                     />
                   </div>
+                  <ProjectImage
+                    url={
+                      node.frontmatter.featuredImg.childImageSharp.fluid
+                        .originalImg
+                    }
+                  />
                   <h3 className={styles.project_title}>
                     <a href={`${node.fields.slug}`}>{node.frontmatter.title}</a>
                   </h3>

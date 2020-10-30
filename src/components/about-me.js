@@ -1,8 +1,12 @@
 import React from "react"
+import styles from "../styles/components/about.module.scss"
 
 const AboutMe = () => {
   return (
     <>
+      <div className={styles.section_header_wrap}>
+        <h2 className={styles.project_header}>ABOUT</h2>
+      </div>
       <p>
         I'm a front-end developer and designer based outside of Boston, MA. I
         have experience with:

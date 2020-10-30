@@ -1,0 +1,38 @@
+@use "../variables";
+
+.section_header_wrap {
+  position: relative;
+  span {
+    position: absolute;
+    left: 38%;
+    transform: translateY(-32px);
+    font-family: variables.$font-accent;
+  }
+}
+
+.project_header {
+  margin: 8rem 0;
+  color: variables.$grey-lite;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+}
+
+.project_header::before {
+  content: "";
+  height: 4rem;
+  width: 4rem;
+  border: 2px solid variables.$red;
+  position: absolute;
+  margin-left: -1rem;
+  z-index: -1;
+  margin-top: -0.5rem;
+}
+
+.project_header::after {
+  content: "002";
+  font-size: 0.8rem;
+  opacity: 0.5;
+  position: absolute;
+  font-family: variables.$font-accent;
+}

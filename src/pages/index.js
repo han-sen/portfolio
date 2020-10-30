@@ -5,7 +5,7 @@ import Footer from "../components/footer"
 import Hero from "../components/hero"
 import Blog from "../components/blog"
 import Projects from "../components/projects"
-import AboutMe from "../components/AboutMe"
+import AboutMe from "../components/about-me"
 import "../styles/global.scss"
 
 export default function Home({ data }) {
@@ -14,7 +14,6 @@ export default function Home({ data }) {
       <Nav />
       <Hero />
       <Projects data={data} />
-      <h2>ABOUT</h2>
       <AboutMe />
       {/* <h2>BLOG</h2>
       <Blog data={data} /> */}
