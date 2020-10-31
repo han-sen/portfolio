@@ -22,6 +22,11 @@ $grey-med: #a9bcd0;
 $grey-dark: #757575;
 
 $red: #ed6464;
+$red-gradient: linear-gradient(
+  120deg,
+  rgba(237, 100, 100, 1) 0%,
+  rgba(88, 99, 176, 1) 100%
+);
 
 /*** FONTS ***/
 $font-stack: "Roboto", sans-serif;

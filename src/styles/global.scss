@@ -11,28 +11,12 @@ a {
 }
 
 body {
-  background: variables.$black-dark;
+  background: variables.$black-med;
   color: variables.$grey-lite;
   font-family: variables.$font-stack;
   font-size: 16px;
 }
 
-// h2 {
-//   margin: 8rem 0 4rem 0;
-//   color: variables.$grey-lite;
-//   text-align: center;
-//   font-size: 3rem;
-//   letter-spacing: 0.25rem;
-//   // text-shadow: 2px 2px variables.$red;
-// }
-
-// h2::before {
-//   content: "";
-//   height: 4rem;
-//   width: 4rem;
-//   border: 2px solid variables.$red;
-//   position: absolute;
-//   margin-left: -1rem;
-//   z-index: -1;
-//   margin-top: -0.5rem;
-// }
+h2 {
+  text-shadow: variables.$text-shadow;
+}
