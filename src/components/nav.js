@@ -7,7 +7,10 @@ export default function Nav() {
   return (
     <nav className={navOpened ? styles.dropdown_opened : ""}>
       <a className={styles.logo} href="/">
-        <img src="dope-logo.svg" alt="Logo" />
+        <img
+          src="https://bonoget.com/wp-content/uploads/2019/03/x.venox_.png"
+          alt="Logo"
+        />
       </a>
       <button
         className={styles.dropdown_toggle}

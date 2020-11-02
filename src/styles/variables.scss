@@ -15,17 +15,30 @@ $black-dark: #1b1b1e;
 // $black-pop: hsl(225 7% 12% / 1);
 $black-pop: #1e2023;
 
-$green: #58a4b0;
+$blue: #254bc9;
+$green: #80e8c9;
 
 $grey-lite: #d8dbe2;
 $grey-med: #a9bcd0;
 $grey-dark: #757575;
 
 $red: #ed6464;
+
+$black-gradient: linear-gradient(
+  360deg,
+  rgba(32, 32, 32, 1) 0%,
+  rgba(43, 43, 43, 1) 100%
+);
+
 $red-gradient: linear-gradient(
   120deg,
   rgba(237, 100, 100, 1) 0%,
   rgba(88, 99, 176, 1) 100%
+);
+$normal-gradient: linear-gradient(
+  120deg,
+  rgba(128, 232, 201, 1) 0%,
+  rgba(37, 75, 201, 1) 100%
 );
 
 /*** FONTS ***/

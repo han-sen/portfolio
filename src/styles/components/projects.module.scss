@@ -10,17 +10,21 @@
   text-align: center;
   font-size: 3rem;
   letter-spacing: 0.25rem;
+  text-shadow: variables.$shadow-full;
 }
 
 .project_header::before {
   content: "";
-  height: 4rem;
-  width: 4rem;
-  border: 2px solid variables.$red;
+  height: 0.5rem;
+  width: 7.5rem;
+  background: variables.$normal-gradient;
   position: absolute;
-  margin-left: -1rem;
+  margin-left: 25px;
   z-index: -1;
-  margin-top: -0.5rem;
+  /* margin-top: -0.5rem; */
+  border-radius: 0.25rem;
+  bottom: 1.5rem;
+  transform: rotate3d(1, 1, 1, 180deg);
 }
 
 .project_header::after {
@@ -33,6 +37,10 @@
 
 .projects_outer_wrap {
   min-height: 100vh;
+  // background: variables.$black-dark;
+  z-index: -1;
+  position: relative;
+  padding-top: 2rem;
 }
 
 .projects_inner_wrap {
@@ -61,7 +69,7 @@
   flex-direction: column;
   max-width: 18rem;
   height: 22rem;
-  background: variables.$black-pop;
+  background: variables.$black-med;
   box-shadow: variables.$shadow-full;
   border-radius: 0.25rem;
   text-shadow: variables.$text-shadow;
