@@ -1,5 +1,6 @@
 import React from "react"
-import Header from "../components/header"
+import Header from "./header"
+import Scene from "./scene"
 import styles from "../styles/components/hero.module.scss"
 
 export default function Hero() {
@@ -10,6 +11,7 @@ export default function Hero() {
           <Header />
         </div>
       </div>
+      <Scene />
     </section>
   )
 }

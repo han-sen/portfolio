@@ -20,3 +20,11 @@ body {
 h2 {
   text-shadow: variables.$text-shadow;
 }
+
+button:focus {
+  outline: 0;
+}
+
+canvas:focus {
+  outline: 0;
+}

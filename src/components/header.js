@@ -8,11 +8,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 export default function Header(props) {
   return (
     <>
-      <h1 className={styles.header}>
-        Mike
-        <br />
-        Hansen
-      </h1>
+      <h1 className={styles.header}>Mike Hansen</h1>
       <div className={styles.subheader}>
         Front-End Dev && some: <CycleText />
       </div>
