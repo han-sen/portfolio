@@ -7,8 +7,6 @@ import styles from "../styles/components/hero.module.scss"
 const Scene = () => (
   <div className={styles.canvas_wrap}>
     <Canvas
-      shadowMap={true}
-      pixelRatio={window.devicePixelRatio}
       camera={{
         position: [12, 12, 12],
       }}

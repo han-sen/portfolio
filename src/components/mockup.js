@@ -3,10 +3,10 @@ import { Canvas, extend, useFrame, useThree } from "react-three-fiber"
 import { useSpring, a } from "react-spring/three"
 import { useLoader } from "react-three-fiber"
 import { TextureLoader } from "three"
-import imageUrl from "../assets/img/placeholder-image.png"
+import imageUrl from "../assets/img/placeholder-image-blue.png"
 
 const MockUp = () => {
-  const [isBig, setIsBig] = useState(false)
+  const [isBig, setIsBig] = useState(true)
 
   const { position, planePosition, size } = useSpring({
     position: isBig ? [1, 0.25, 0] : [1, -2, 0],
