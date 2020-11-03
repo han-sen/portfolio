@@ -8,12 +8,15 @@ nav {
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  background: variables.$black-med;
+  z-index: 999;
+  height: 3rem;
 }
 
 .logo {
-  align-self: flex-start;
+  // align-self: flex-start;
   img {
-    width: 6rem;
+    width: 2rem;
   }
 }
 
@@ -21,7 +24,7 @@ nav {
   // margin-left: 2rem;
   text-decoration: none;
   font-family: variables.$font-accent;
-  color: white;
+  color: variables.$green;
 }
 
 .dropdown_toggle {
@@ -31,7 +34,7 @@ nav {
 .burger_span {
   height: 0.25rem;
   width: 2rem;
-  background: red;
+  background: variables.$green;
   display: block;
   margin: 3px 0;
 }
@@ -85,17 +88,7 @@ nav {
       align-items: center;
       margin: 0;
       padding: 0;
-      background: #005c97; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to right,
-        #363795,
-        #005c97
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to right,
-        #363795,
-        #005c97
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: variables.$blue;
       z-index: 0;
       opacity: 1; /* fade in */
       transform: translateY(0);

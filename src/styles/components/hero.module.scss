@@ -26,5 +26,7 @@
 @media screen and (max-width: 768px) {
   .hero_inner {
     flex-direction: column;
+    top: 20%;
+    text-align: center;
   }
 }

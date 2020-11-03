@@ -17,7 +17,7 @@ const MockUp = () => {
   const texture = useLoader(TextureLoader, imageUrl)
 
   return (
-    <a.group position={position} onClick={() => setIsBig(!isBig)}>
+    <a.group position={position}>
       <mesh position={[-6.5, 0, 3]}>
         <boxBufferGeometry args={[1, depth, 2]} />
         <meshNormalMaterial />

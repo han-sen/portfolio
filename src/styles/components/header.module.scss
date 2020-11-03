@@ -1,7 +1,7 @@
 @use "../variables";
 
 .header {
-  font-size: 5em;
+  font-size: 4em;
   color: white;
   line-height: 5rem;
   letter-spacing: 0.25rem;
@@ -52,5 +52,18 @@
   to {
     width: 100%;
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .subheader {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 1rem 0;
   }
 }

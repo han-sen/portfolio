@@ -4,20 +4,25 @@ import CameraControls from "./camera"
 import MockUp from "./mockup"
 import styles from "../styles/components/hero.module.scss"
 
-const Scene = () => (
-  <div className={styles.canvas_wrap}>
-    <Canvas
-      camera={{
-        position: [12, 12, 12],
-      }}
-    >
-      <CameraControls />
-      <gridHelper args={[16, 16, `white`, `gray`]} />
-      <Suspense fallback={null}>
-        <MockUp />
-      </Suspense>
-    </Canvas>
-  </div>
-)
+const Scene = () => {
+  return (
+    <div className={styles.canvas_wrap}>
+      {typeof window !== `undefined` && (
+        <Canvas
+          pixelRatio={window.devicePixelRatio}
+          camera={{
+            position: [12, 12, 12],
+          }}
+        >
+          <CameraControls />
+          <gridHelper args={[16, 16, `white`, `gray`]} />
+          <Suspense fallback={null}>
+            <MockUp />
+          </Suspense>
+        </Canvas>
+      )}
+    </div>
+  )
+}
 
 export default Scene
