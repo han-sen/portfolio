@@ -2,7 +2,7 @@
 title: "Aphid"
 date: "2020-10-20"
 post_type: "project"
-feature: true
+feature: false
 description: "A bug-tracking dashboard to help catalog open site issues."
 github: "https://github.com/han-sen/archers-island"
 liveLink: "https://han-sen.github.io/archers-island/"

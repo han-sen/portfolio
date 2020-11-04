@@ -21,7 +21,6 @@
   position: absolute;
   margin-left: 25px;
   z-index: -1;
-  /* margin-top: -0.5rem; */
   border-radius: 0.25rem;
   bottom: 1.5rem;
   transform: rotate3d(1, 1, 1, 180deg);
@@ -37,7 +36,6 @@
 
 .projects_outer_wrap {
   min-height: 100vh;
-  // background: variables.$black-dark;
   z-index: -1;
   position: relative;
   padding-top: 2rem;
@@ -53,27 +51,26 @@
 
 .project_wrap {
   display: flex;
-  flex-direction: column;
-  max-width: 60rem;
+  max-width: 48rem;
   margin: 2rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(52 49 49);
+  box-shadow: variables.$shadow-full;
+  overflow: hidden;
 }
 
 .project_inner {
-  flex: 1;
+  flex: 1 1;
+  display: flex;
 }
 
 .project_details_wrap {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  max-width: 18rem;
-  height: 22rem;
-  background: variables.$black-med;
   box-shadow: variables.$shadow-full;
   border-radius: 0.25rem;
   text-shadow: variables.$text-shadow;
-  // border: 1px solid variables.$grey-med;
 }
 
 .project_icon_wrap {
@@ -81,19 +78,17 @@
   justify-content: space-between;
   margin-bottom: 1rem;
   font-size: 1.2rem;
-  color: variables.$primary-color-light;
+  color: variables.$grey-med;
 }
 
 .project_links_item {
   margin-left: 0.5rem;
-  color: variables.$primary-color-light;
+  color: variables.$grey-med;
 }
 
 .project_image_wrap {
-  height: 10rem;
   box-shadow: variables.$shadow-full;
-  // clip-path: variables.$clip-top-left;
-  border-radius: 0.25rem;
+  width: 26rem;
 }
 
 .project_title {
