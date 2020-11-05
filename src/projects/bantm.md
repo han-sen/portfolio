@@ -11,5 +11,5 @@ icon: "faGlobe"
 tags:
   - React
   - Firebase
-  - Node
+  - Express
 ---

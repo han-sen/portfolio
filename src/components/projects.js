@@ -1,4 +1,6 @@
 import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 import styles from "../styles/components/projects.module.scss"
 import ProjectCategory from "./project-category"
 import ProjectLinks from "./project-links"
@@ -8,6 +10,7 @@ export default function Projects(props) {
   return (
     <section className={styles.projects_outer_wrap}>
       <div className={styles.section_header_wrap}>
+        <div className={styles.header_decoration}></div>
         <h2 className={styles.project_header}>PROJECTS</h2>
       </div>
       <div className={styles.projects_inner_wrap}>
@@ -47,6 +50,11 @@ export default function Projects(props) {
               </div>
             </div>
           ))}
+      </div>
+      <div className={styles.more_projects}>
+        <button>
+          View All Projects <FontAwesomeIcon icon={faAngleDoubleRight} />
+        </button>
       </div>
     </section>
   )

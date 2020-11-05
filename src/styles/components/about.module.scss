@@ -1,5 +1,15 @@
 @use "../variables";
 
+.about_wrap {
+  max-width: variables.$container;
+}
+
+.about_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .section_header_wrap {
   position: relative;
   span {
@@ -10,7 +20,7 @@
   }
 }
 
-.project_header {
+.about_header {
   margin: 8rem 0;
   color: variables.$grey-lite;
   text-align: center;
@@ -19,7 +29,7 @@
   text-shadow: variables.$shadow-full;
 }
 
-.project_header::before {
+.about_header::before {
   content: "";
   height: 0.5rem;
   width: 7.5rem;
@@ -33,10 +43,22 @@
   transform: rotate3d(1, 1, 1, 180deg);
 }
 
-.project_header::after {
+.about_header::after {
   content: "002";
   font-size: 0.8rem;
   opacity: 0.5;
   position: absolute;
   font-family: variables.$font-accent;
+}
+
+.about_text_wrap {
+  width: 50%;
+}
+
+.about_image_wrap {
+  width: 50%;
+}
+
+.about_image {
+  max-width: 10rem;
 }
