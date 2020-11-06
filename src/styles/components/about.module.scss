@@ -122,6 +122,12 @@
   width: 100%;
   max-width: 300px;
   border: 1px solid variables.$grey-dark;
+  filter: grayscale(0.85);
+  transition: filter 1s ease;
+}
+
+.about_image:hover {
+  filter: grayscale(0.1);
 }
 
 .built_wrap {
@@ -152,5 +158,8 @@
   }
   .about_wrap {
     margin: 0 2rem;
+  }
+  .section_header_wrap {
+    margin: 4rem 2rem;
   }
 }

@@ -1,5 +1,5 @@
-import React, { Suspense } from "react"
-import { Canvas } from "react-three-fiber"
+import React, { useRef, Suspense } from "react"
+import { Canvas, useFrame } from "react-three-fiber"
 import CameraControls from "./camera"
 import MockUp from "./mockup"
 import styles from "../styles/components/hero.module.scss"
@@ -15,10 +15,10 @@ export default function Scene() {
           }}
         >
           <CameraControls />
-          <gridHelper args={[16, 16, `white`, `gray`]} />
           <Suspense fallback={null}>
             <MockUp />
           </Suspense>
+          <gridHelper args={[16, 16, `white`, `gray`]} />
         </Canvas>
       )}
     </div>

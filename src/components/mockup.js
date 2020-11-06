@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react"
-import { Canvas, extend, useFrame, useThree } from "react-three-fiber"
 import { useSpring, a } from "react-spring/three"
-import { useLoader } from "react-three-fiber"
+import { useFrame, useLoader } from "react-three-fiber"
 import { TextureLoader } from "three"
 import imageUrl from "../assets/img/placeholder-image-dots.png"
 import quoteUrl from "../assets/img/quotes.png"
@@ -9,7 +8,6 @@ import crossUrl from "../assets/img/x-mark.png"
 
 export default function MockUp() {
   const [isBig, setIsBig] = useState(false)
-
   const { position } = useSpring({
     position: isBig ? [1, 0.25, 0] : [1, -2, 0],
   })
@@ -17,13 +15,13 @@ export default function MockUp() {
   const texture = useLoader(TextureLoader, imageUrl)
   const quoteTexture = useLoader(TextureLoader, quoteUrl)
   const crossTexture = useLoader(TextureLoader, crossUrl)
-
+  const groupRef = useRef()
   useEffect(() => {
     setIsBig(true)
   })
-
+  useFrame(() => {})
   return (
-    <a.group position={position}>
+    <a.group position={position} ref={groupRef}>
       <mesh position={[-6.5, 0, 3]}>
         <boxBufferGeometry args={[1, depth, 2]} />
         <meshNormalMaterial />
