@@ -1,16 +1,10 @@
 import React from "react"
+import styles from "../styles/components/footer.module.scss"
 
 export default function Footer() {
   return (
-    <p
-      style={{
-        textAlign: "center",
-        margin: "4rem 0",
-        fontFamily: "Fira Mono",
-        color: "#bababa",
-      }}
-    >
-      Copyright 2020 Mike Hansen
-    </p>
+    <footer className={styles.footer_wrap}>
+      <p>Copyright 2020 Mike Hansen</p>
+    </footer>
   )
 }

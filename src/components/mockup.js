@@ -7,7 +7,7 @@ import imageUrl from "../assets/img/placeholder-image-dots.png"
 import quoteUrl from "../assets/img/quotes.png"
 import crossUrl from "../assets/img/x-mark.png"
 
-const MockUp = () => {
+export default function MockUp() {
   const [isBig, setIsBig] = useState(false)
 
   const { position } = useSpring({
@@ -136,5 +136,3 @@ const MockUp = () => {
     </a.group>
   )
 }
-
-export default MockUp

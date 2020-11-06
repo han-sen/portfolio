@@ -4,7 +4,7 @@ import CameraControls from "./camera"
 import MockUp from "./mockup"
 import styles from "../styles/components/hero.module.scss"
 
-const Scene = () => {
+export default function Scene() {
   return (
     <div className={styles.canvas_wrap}>
       {typeof window !== `undefined` && (
@@ -24,5 +24,3 @@ const Scene = () => {
     </div>
   )
 }
-
-export default Scene

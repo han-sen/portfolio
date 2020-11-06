@@ -1,5 +1,9 @@
 @use "../variables";
 
+.about_wrap {
+  z-index: 999;
+}
+
 .section_header_wrap {
   position: relative;
   display: flex;
@@ -70,7 +74,7 @@
   font-weight: 300;
   p {
     margin-bottom: 1rem;
-    line-height: 1.4rem;
+    line-height: 1.5;
   }
   a {
     color: variables.$green;
@@ -100,6 +104,36 @@
   justify-content: flex-end;
 }
 
+// .about_image_wrap::after {
+//   content: "";
+//   height: 10rem;
+//   width: 10rem;
+//   position: absolute;
+//   margin-top: 26px;
+//   margin-right: -26px;
+//   border: 1px solid grey;
+//   // background-size: 40px 40px;
+//   // background-image: linear-gradient(to right, grey 1px, transparent 1px),
+//   //   linear-gradient(to bottom, grey 1px, transparent 1px);
+//   z-index: -1;
+// }
+
 .about_image {
   max-width: 75%;
+  border: 1px solid variables.$grey-dark;
+}
+
+.built_wrap {
+  text-align: center;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+  p {
+    font-family: "Fira Mono";
+    font-size: 0.8rem;
+    border: 1px solid #aabcd0;
+    padding: 1rem;
+    border-radius: 0.125rem;
+    color: #f9f9f9;
+  }
 }

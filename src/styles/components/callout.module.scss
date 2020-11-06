@@ -1,0 +1,11 @@
+.callout_inner_wrap {
+  height: 10rem;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem 0;
+  background-position: center;
+}

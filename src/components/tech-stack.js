@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretSquareRight } from "@fortawesome/free-solid-svg-icons"
 import styles from "../styles/components/about.module.scss"
 
-const TechStack = () => {
+export default function TechStack() {
   const techOne = ["Node", "Express", "React", "Mongo"]
   const techTwo = ["Firebase", "HTML", "CSS", "Git"]
 
@@ -32,5 +32,3 @@ const TechStack = () => {
     </div>
   )
 }
-
-export default TechStack

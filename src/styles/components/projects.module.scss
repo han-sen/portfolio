@@ -3,6 +3,7 @@
 .section_header_wrap {
   position: relative;
   display: flex;
+  flex-direction: row-reverse;
   max-width: variables.$container;
   justify-content: center;
   align-items: center;
@@ -24,10 +25,11 @@
   background: variables.$black-med;
   margin-top: -0.5rem;
   border: 1px solid #7c7d80;
+  right: 0;
 }
 
 .project_header {
-  margin-left: 1rem;
+  margin-right: 1rem;
   color: variables.$grey-lite;
   text-align: center;
   font-size: 3rem;
@@ -54,7 +56,7 @@
   opacity: 0.5;
   position: absolute;
   font-family: variables.$font-accent;
-  left: 0;
+  right: -5px;
 }
 
 .projects_outer_wrap {
