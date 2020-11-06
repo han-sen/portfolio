@@ -2,7 +2,7 @@
 
 .header {
   font-size: 4em;
-  color: white;
+  color: variables.$white;
   line-height: 5rem;
   letter-spacing: 0.25rem;
 }
@@ -18,7 +18,7 @@
 
 .header_link_wrap {
   // background: variables.$red;
-  color: white;
+  color: variables.$white;
 }
 
 .header_link {

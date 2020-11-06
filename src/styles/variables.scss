@@ -16,6 +16,7 @@ $shadow-low: 0 2.8px 1px -80px rgba(0, 0, 0, 0.02),
 $text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 
 /*** COLORS ***/
+$white: #f9f9f9;
 $black-lite: #373f51;
 $black-med: #202020;
 $black-dark: #1b1b1e;
@@ -80,3 +81,4 @@ $clip-bottom-right: polygon(
 /*** CONTAINERS ***/
 
 $container: 900px;
+$container-indent: 720px;

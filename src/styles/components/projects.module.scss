@@ -10,7 +10,8 @@
 }
 
 .header_decoration {
-  width: 75%;
+  // width: 75%;
+  flex: 1;
   height: 1px;
   background: #333131;
 }
@@ -26,7 +27,7 @@
 }
 
 .project_header {
-  // margin: 8rem 0;
+  margin-left: 1rem;
   color: variables.$grey-lite;
   text-align: center;
   font-size: 3rem;
@@ -69,7 +70,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: variables.$container;
+  max-width: variables.$container-indent;
 }
 
 .project_wrap {
@@ -122,7 +123,7 @@
   font-weight: 700;
   font-size: 1.2rem;
   margin: 1.5rem 0 1rem 0;
-  color: white;
+  color: variables.$white;
 }
 
 .project_desc {
@@ -152,7 +153,7 @@
     padding: 1rem 1rem;
     background: variables.$black-med;
     border: 1px solid variables.$grey-med;
-    color: white;
+    color: variables.$white;
     font-family: variables.$font-accent;
     box-shadow: variables.$shadow-low;
     margin-top: 2rem;
