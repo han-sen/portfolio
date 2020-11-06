@@ -137,3 +137,19 @@
     color: #f9f9f9;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .about_inner {
+    flex-direction: column;
+  }
+  .about_text_wrap {
+    width: 100%;
+  }
+  .about_image_wrap {
+    width: 100%;
+    justify-content: center;
+  }
+  .about_wrap {
+    margin: 0 2rem;
+  }
+}

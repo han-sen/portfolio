@@ -165,7 +165,15 @@
 
 @media screen and (max-width: 768px) {
   .projects_outer_wrap,
-  .projects_inner_wrap {
+  .projects_inner_wrap,
+  .project_inner {
     flex-direction: column;
+  }
+  .project_image_wrap {
+    height: 12rem;
+    width: 100%;
+  }
+  .section_header_wrap {
+    margin: 4rem 2rem;
   }
 }
