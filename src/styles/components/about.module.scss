@@ -41,18 +41,18 @@
   text-shadow: variables.$shadow-full;
 }
 
-.about_header::before {
-  content: "";
-  height: 0.5rem;
-  width: 7.5rem;
-  background: variables.$red-gradient;
-  position: absolute;
-  margin-left: 25px;
-  z-index: -1;
-  border-radius: 0.25rem;
-  bottom: 1.5rem;
-  transform: rotate3d(1, 1, 1, 180deg);
-}
+// .about_header::before {
+//   content: "";
+//   height: 0.5rem;
+//   width: 7.5rem;
+//   background: variables.$red-gradient;
+//   position: absolute;
+//   margin-left: 25px;
+//   z-index: -1;
+//   border-radius: 0.25rem;
+//   bottom: 1.5rem;
+//   transform: rotate3d(1, 1, 1, 180deg);
+// }
 
 .about_header::after {
   content: "002";
@@ -119,7 +119,8 @@
 // }
 
 .about_image {
-  max-width: 75%;
+  width: 100%;
+  max-width: 300px;
   border: 1px solid variables.$grey-dark;
 }
 

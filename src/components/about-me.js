@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "../styles/components/about.module.scss"
-import imageUrl from "../assets/img/me-ascii.png"
+import imageUrl from "../assets/img/unnamed.jpg"
 import TechStack from "./tech-stack"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
