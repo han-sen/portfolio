@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { useSpring, a, config } from "react-spring/three"
-import { useFrame, useLoader } from "react-three-fiber"
+import { useLoader } from "react-three-fiber"
 import { TextureLoader } from "three"
-import sliderUrl from "../assets/img/slider.png"
+import sliderUrl from "../assets/img/slider2.png"
 import quoteUrl from "../assets/img/quotes.png"
 import crossUrl from "../assets/img/x-mark.png"
 import logoUrl from "../assets/img/fakeLogo.png"
@@ -32,8 +32,7 @@ export default function MockUp(props) {
   useEffect(() => {
     setIsBig(true)
     setTimeout(() => props.setAutoRotate(true), 1000)
-  }, [])
-  useFrame(() => {})
+  })
   return (
     <a.group position={position}>
       {/* fake logo */}

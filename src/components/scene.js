@@ -1,4 +1,4 @@
-import React, { useRef, Suspense, useState } from "react"
+import React, { Suspense, useState } from "react"
 import { Canvas } from "react-three-fiber"
 import CameraControls from "./camera"
 import MockUp from "./mockup"

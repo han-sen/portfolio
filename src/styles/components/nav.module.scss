@@ -11,6 +11,8 @@ nav {
   background: variables.$black-med;
   z-index: 999;
   height: 4rem;
+  border-bottom: 1px solid grey;
+  mix-blend-mode: multiply;
 }
 
 .logo {

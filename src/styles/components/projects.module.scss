@@ -7,7 +7,7 @@
   max-width: variables.$container;
   justify-content: center;
   align-items: center;
-  margin: 8rem auto;
+  margin: 8rem 0;
 }
 
 .header_decoration {
@@ -34,7 +34,6 @@
   text-align: center;
   font-size: 3rem;
   letter-spacing: 0.25rem;
-  text-shadow: variables.$shadow-full;
 }
 
 // .project_header::before {
@@ -65,6 +64,10 @@
   position: relative;
   padding-top: 2rem;
   z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects_inner_wrap {
@@ -161,6 +164,12 @@
     margin-top: 2rem;
     border-radius: 0.25rem;
   }
+}
+
+button:hover {
+  cursor: pointer;
+  color: variables.$green;
+  border: 1px solid variables.$green;
 }
 
 @media screen and (max-width: 768px) {

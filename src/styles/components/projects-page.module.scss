@@ -1,0 +1,24 @@
+@use "../variables";
+
+.projects_wrap {
+  padding-top: 4rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.projects_wrap_inner {
+  padding: 8rem 0;
+  max-width: variables.$container;
+}
+
+.project_stub_wrap {
+  margin: 2rem 0;
+}
+
+.project_date {
+  font-family: variables.$font-accent;
+  color: variables.$green;
+}

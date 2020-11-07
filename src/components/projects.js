@@ -1,19 +1,28 @@
 import React from "react"
+import { useSpring, a, config } from "react-spring"
+import useIsInViewport from "use-is-in-viewport"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 import styles from "../styles/components/projects.module.scss"
 import ProjectCategory from "./project-category"
 import ProjectLinks from "./project-links"
 import ProjectImage from "./project-image"
+import ProjectHeader from "./project-header"
 
 export default function Projects(props) {
+  const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
+  const { opacity } = useSpring({
+    opacity: isInViewport ? 1 : 0,
+    config: config.molasses,
+  })
   return (
     <section className={styles.projects_outer_wrap}>
-      <div className={styles.section_header_wrap}>
-        <div className={styles.header_decoration}></div>
-        <h2 className={styles.project_header}>PROJECTS</h2>
-      </div>
-      <div className={styles.projects_inner_wrap}>
+      <ProjectHeader />
+      <a.div
+        className={styles.projects_inner_wrap}
+        ref={targetRef}
+        style={{ opacity: opacity }}
+      >
         {props.data.allMarkdownRemark.edges
           .filter(({ node }) => node.frontmatter.feature)
           .map(({ node }, i) => (
@@ -50,10 +59,12 @@ export default function Projects(props) {
               </div>
             </div>
           ))}
-      </div>
+      </a.div>
       <div className={styles.more_projects}>
         <button>
-          View All Projects <FontAwesomeIcon icon={faAngleDoubleRight} />
+          <a href="/projects">
+            View All Projects <FontAwesomeIcon icon={faAngleDoubleRight} />
+          </a>
         </button>
       </div>
     </section>

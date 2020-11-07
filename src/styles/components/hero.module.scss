@@ -23,6 +23,15 @@
   padding-top: 3.5rem;
 }
 
+.hero_email {
+  position: absolute;
+  color: white;
+  width: 20rem;
+  z-index: 99999;
+  left: 3rem;
+  top: 50%;
+}
+
 @media screen and (max-width: 768px) {
   .hero_inner {
     flex-direction: column;

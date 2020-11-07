@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import CycleText from "./cycle-text"
 import styles from "../styles/components/header.module.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

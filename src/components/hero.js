@@ -11,6 +11,9 @@ export default function Hero() {
           <Header />
         </div>
       </div>
+      {/* <div className={styles.hero_email}>
+        <p>mike@mikehansen.io</p>
+      </div> */}
       <Scene />
     </section>
   )

@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
 import Hero from "../components/hero"
-import Blog from "../components/blog"
 import Projects from "../components/projects"
 import AboutMe from "../components/about-me"
 import "../styles/global.scss"
@@ -15,8 +14,6 @@ export default function Home({ data }) {
       <Hero />
       <Projects data={data} />
       <AboutMe />
-      {/* <h2>BLOG</h2>
-      <Blog data={data} /> */}
       <Footer />
     </main>
   )
