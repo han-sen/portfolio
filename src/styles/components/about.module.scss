@@ -121,9 +121,9 @@
 .about_image {
   width: 100%;
   max-width: 300px;
-  border: 1px solid variables.$grey-dark;
+  border: 2px solid variables.$green;
   filter: grayscale(0.85);
-  transition: filter 1s ease;
+  transition: filter 0.4s ease;
 }
 
 .about_image:hover {

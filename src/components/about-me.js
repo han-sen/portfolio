@@ -35,7 +35,7 @@ export default function AboutMe() {
       <div className={styles.built_wrap}>
         <p>
           <FontAwesomeIcon icon={faGlobeAmericas} /> This site was built with
-          React, Three, Gatsby, and deployed on Netlify.
+          React, Three, Gatsby, & deployed on Netlify.
         </p>
       </div>
     </section>

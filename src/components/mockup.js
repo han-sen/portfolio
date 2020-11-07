@@ -1,31 +1,53 @@
-import React, { useRef, useState, useEffect } from "react"
-import { useSpring, a } from "react-spring/three"
+import React, { useState, useEffect } from "react"
+import { useSpring, a, config } from "react-spring/three"
 import { useFrame, useLoader } from "react-three-fiber"
 import { TextureLoader } from "three"
-import imageUrl from "../assets/img/placeholder-image-dots.png"
+import sliderUrl from "../assets/img/slider.png"
 import quoteUrl from "../assets/img/quotes.png"
 import crossUrl from "../assets/img/x-mark.png"
+import logoUrl from "../assets/img/fakeLogo.png"
 
-export default function MockUp() {
+export default function MockUp(props) {
   const [isBig, setIsBig] = useState(false)
   const { position } = useSpring({
     position: isBig ? [1, 0.25, 0] : [1, -2, 0],
+    config: { tension: 180, friction: 18 },
+  })
+  const { sliderPosition } = useSpring({
+    sliderPosition: isBig ? [-2.75, 0.275, 0] : [-2.75, 0.275, -4],
+    config: config.slow,
+  })
+  const { planeRotation } = useSpring({
+    planeRotation: isBig
+      ? [-Math.PI / 2, 0, Math.PI / 2]
+      : [-Math.PI / 2, 0, -Math.PI / 2],
+    config: config.molasses,
   })
   const depth = 0.5
-  const texture = useLoader(TextureLoader, imageUrl)
+  const sliderTexture = useLoader(TextureLoader, sliderUrl)
   const quoteTexture = useLoader(TextureLoader, quoteUrl)
   const crossTexture = useLoader(TextureLoader, crossUrl)
-  const groupRef = useRef()
+  const logoTexture = useLoader(TextureLoader, logoUrl)
+
   useEffect(() => {
     setIsBig(true)
-  })
+    setTimeout(() => props.setAutoRotate(true), 1000)
+  }, [])
   useFrame(() => {})
   return (
-    <a.group position={position} ref={groupRef}>
+    <a.group position={position}>
+      {/* fake logo */}
       <mesh position={[-6.5, 0, 3]}>
         <boxBufferGeometry args={[1, depth, 2]} />
         <meshNormalMaterial />
       </mesh>
+      <a.mesh
+        position={[-6.5, 0.275, 3]}
+        rotation={[-Math.PI / 2, 0, Math.PI / 2]}
+      >
+        <planeBufferGeometry args={[1.5, 0.75, 2]} />
+        <meshBasicMaterial map={logoTexture} transparent={true} roughness={0} />
+      </a.mesh>
 
       <mesh position={[-6.5, 0, -3.5]}>
         <boxBufferGeometry args={[1, depth, 1]} />
@@ -44,11 +66,15 @@ export default function MockUp() {
       </mesh>
       {/* hero texture plane */}
       <a.mesh
-        position={[-2.75, 0.275, 0]}
+        position={sliderPosition}
         rotation={[-Math.PI / 2, 0, Math.PI / 2]}
       >
-        <planeBufferGeometry args={[2.75, 2.75, 2.75]} />
-        <meshBasicMaterial map={texture} transparent={true} roughness={0} />
+        <planeBufferGeometry args={[4, 4, 4]} />
+        <meshBasicMaterial
+          map={sliderTexture}
+          transparent={true}
+          roughness={0}
+        />
       </a.mesh>
 
       {/* triple block row */}
@@ -57,10 +83,7 @@ export default function MockUp() {
         <meshNormalMaterial />
       </mesh>
 
-      <a.mesh
-        position={[1, 0.275, 3]}
-        rotation={[-Math.PI / 2, 0, Math.PI / 2]}
-      >
+      <a.mesh position={[1, 0.275, 3]} rotation={planeRotation}>
         <planeBufferGeometry args={[1.75, 1.75, 1.75]} />
         <meshBasicMaterial
           map={crossTexture}
@@ -74,10 +97,7 @@ export default function MockUp() {
         <meshNormalMaterial />
       </mesh>
 
-      <a.mesh
-        position={[1, 0.275, 0]}
-        rotation={[-Math.PI / 2, 0, Math.PI / 2]}
-      >
+      <a.mesh position={[1, 0.275, 0]} rotation={planeRotation}>
         <planeBufferGeometry args={[1.75, 1.75, 1.75]} />
         <meshBasicMaterial
           map={crossTexture}
@@ -91,10 +111,7 @@ export default function MockUp() {
         <meshNormalMaterial />
       </mesh>
 
-      <a.mesh
-        position={[1, 0.275, -3]}
-        rotation={[-Math.PI / 2, 0, Math.PI / 2]}
-      >
+      <a.mesh position={[1, 0.275, -3]} rotation={planeRotation}>
         <planeBufferGeometry args={[1.75, 1.75, 1.75]} />
         <meshBasicMaterial
           map={crossTexture}

@@ -5,6 +5,7 @@ import Logo from "../assets/img/logo.png"
 export default function Nav() {
   const [navOpened, setNavOpened] = useState(false)
   const toggleNav = () => setNavOpened(!navOpened)
+
   return (
     <nav className={navOpened ? styles.dropdown_opened : ""}>
       <a className={styles.logo} href="/">
@@ -21,7 +22,7 @@ export default function Nav() {
       </button>
       <div className={styles.dropdown_link_wrap}>
         <a href="/blog">Projects</a>
-        <a href="/projects">About</a>
+        <a href="#about">About</a>
       </div>
     </nav>
   )
