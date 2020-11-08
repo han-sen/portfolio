@@ -6,7 +6,7 @@ import styles from "../styles/components/projects.module.scss"
 export default function ProjectHeader() {
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
   const { width } = useSpring({
-    width: isInViewport ? "40%" : "20%",
+    width: isInViewport ? "85%" : "30%",
     config: config.molasses,
   })
   return (
