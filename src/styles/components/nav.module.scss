@@ -1,18 +1,24 @@
 @use "../variables";
 
+.nav_wrap {
+  position: relative;
+  max-width: variables.$container-xl;
+  height: 4rem;
+  margin: 0 auto;
+}
+
 nav {
-  // max-width: 1200px;
   display: flex;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  background: variables.$black-med;
   z-index: 999;
   height: 4rem;
-  border-bottom: 1px solid grey;
-  mix-blend-mode: multiply;
+  /* border-bottom: 1px solid grey; */
+  max-width: variables.$container-xl;
+  margin-top: 2rem;
 }
 
 .logo {
@@ -49,6 +55,8 @@ nav {
     top: 0;
     left: 0;
     right: 0;
+    margin-top: 0;
+    background: variables.$black-med;
   }
   .dropdown_link_wrap {
     // display: none;

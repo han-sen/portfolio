@@ -61,11 +61,11 @@ export default function Projects(props) {
           ))}
       </a.div>
       <div className={styles.more_projects}>
-        <button>
-          <a href="/projects">
+        <a href="/projects">
+          <button>
             View All Projects <FontAwesomeIcon icon={faAngleDoubleRight} />
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </section>
   )

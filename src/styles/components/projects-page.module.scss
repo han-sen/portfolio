@@ -7,6 +7,14 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  svg {
+    opacity: 0.5;
+    margin-right: 0.5rem;
+  }
+}
+
+.projects_header {
+  font-size: 4rem;
 }
 
 .projects_wrap_inner {
@@ -16,9 +24,52 @@
 
 .project_stub_wrap {
   margin: 2rem 0;
+  padding: 0 0 1rem 0;
+  display: flex;
+}
+
+.project_link {
+  color: variables.$white;
 }
 
 .project_date {
   font-family: variables.$font-accent;
+  color: variables.$grey-med;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  flex: 1;
+}
+
+.top_row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.project_desc {
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.project_stub_img {
+  max-width: 8rem;
+}
+
+.text_wrap {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.project_ext_link {
+  font-weight: 300;
+  text-decoration: underline;
   color: variables.$green;
+  opacity: 0.5;
+  margin-right: 0.5rem;
+}
+
+.project_ext_link:hover {
+  opacity: 1;
 }

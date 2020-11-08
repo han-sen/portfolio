@@ -1,6 +1,6 @@
 ---
 title: "Picount"
-date: "2020-04-06"
+date: "06-02-2020"
 post_type: "project"
 feature: false
 description: "A real-time chat app built for code talk. Allows users to create rooms by topic."
