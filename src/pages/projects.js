@@ -1,15 +1,26 @@
-import React from "react"
+import React, { useRef } from "react"
 import { graphql } from "gatsby"
+import { useSpring, a, config } from "react-spring"
+import useIsInViewport from "use-is-in-viewport"
 import Nav from "../components/nav"
 import ProjectCategory from "../components/project-category"
 import Footer from "../components/footer"
 import styles from "../styles/components/projects-page.module.scss"
 
 export default function Projects({ data }) {
+  const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
+  const { opacity } = useSpring({
+    opacity: isInViewport ? 1 : 0,
+    config: config.molasses,
+  })
   return (
     <>
       <Nav />
-      <section className={styles.projects_wrap}>
+      <a.section
+        className={styles.projects_wrap}
+        ref={targetRef}
+        style={{ opacity: opacity }}
+      >
         <div className={styles.projects_wrap_inner}>
           <h1 className={styles.projects_header}>PROJECTS</h1>
           {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -51,7 +62,7 @@ export default function Projects({ data }) {
             </div>
           ))}
         </div>
-      </section>
+      </a.section>
       <Footer />
     </>
   )

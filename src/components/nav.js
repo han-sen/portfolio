@@ -22,7 +22,7 @@ export default function Nav() {
           <span className={styles.burger_span}></span>
         </button>
         <div className={styles.dropdown_link_wrap}>
-          <a href="/blog">Projects</a>
+          <a href="/projects">Projects</a>
           <a href="#about">About</a>
         </div>
       </nav>

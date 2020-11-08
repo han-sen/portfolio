@@ -1,25 +1,117 @@
 @use "../variables";
 
+.blog_img {
+  max-width: 100%;
+}
+
 .blog_article_wrap {
   display: flex;
   flex-direction: column;
-  max-width: 40rem;
+  max-width: variables.$container-indent;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding-top: 4rem;
+  p {
+    font-weight: 300;
+  }
+}
+
+.top_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid variables.$grey-dark;
 }
 
 .blog_article_title {
   font-size: 2.5rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .blog_article_date {
   font-family: variables.$font-accent;
   font-size: 0.8rem;
+  color: variables.$grey-med;
+}
+
+.details_wrap {
+  text-align: right;
+}
+
+.built_with {
+  font-size: 0.8rem;
+}
+
+.project_ext_link {
+  font-weight: 300;
+  text-decoration: underline;
+  color: variables.$green;
+  opacity: 0.5;
+  margin-left: 0.5rem;
+}
+
+.project_ext_link:hover {
+  opacity: 1;
 }
 
 .blog_post_body {
-  font-weight: 300;
+  margin: 2rem 0;
+  // padding: 1rem;
+  // border-top: 1px solid grey;
+  // border-bottom: 1px solid grey;
   p {
     line-height: 1.5rem;
     margin-top: 1rem;
+  }
+}
+
+.project_stack {
+  display: flex;
+  font-family: variables.$font-accent;
+  color: variables.$green;
+  text-decoration: none;
+  list-style: none;
+  font-size: 0.8rem;
+  li {
+    margin-right: 0.5rem;
+  }
+}
+
+.more_projects {
+  display: flex;
+  justify-content: center;
+  button {
+    padding: 1rem 1rem;
+    background: variables.$black-med;
+    border: 1px solid variables.$grey-med;
+    color: variables.$white;
+    font-family: variables.$font-accent;
+    box-shadow: variables.$shadow-low;
+    margin-top: 2rem;
+    border-radius: 0.25rem;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+  color: variables.$green;
+  border: 1px solid variables.$green;
+}
+
+@media screen and (max-width: 768px) {
+  .blog_article_wrap {
+    max-width: 100%;
+    margin: 1rem;
+  }
+  .top_row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+  .details_wrap {
+    text-align: left;
+  }
+  .project_ext_link {
+    margin: 0 0.5rem 0 0;
   }
 }

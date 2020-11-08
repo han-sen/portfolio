@@ -15,7 +15,7 @@ export default function AboutMe() {
     config: config.molasses,
   })
   return (
-    <section className={styles.about_wrap}>
+    <section className={styles.about_wrap} id="about">
       <AboutHeader />
       <a.div
         className={styles.about_inner}

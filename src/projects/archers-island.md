@@ -14,4 +14,4 @@ tags:
   - CSS
 ---
 
-# This is where I'll talk about Archer's Island.
+Archer's Island is canvas-based archery contest where players battle for the last piece of land. This was my first real browser game and it was a great opportunity to learn about HTML canvas as well as the basics of game development including the game loop, requestFrameAnimation, collision detection, and more.

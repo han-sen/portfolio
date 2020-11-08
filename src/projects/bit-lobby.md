@@ -13,3 +13,5 @@ tags:
   - Mongo
   - SocketIO
 ---
+
+Bit Lobby is a real-time chat app built for code talk. Allows users to create rooms by topic. This project was a chance to learn websockets to allow instant chat updates for all users connected to a room.

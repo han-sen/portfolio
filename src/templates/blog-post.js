@@ -1,6 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 import Nav from "../components/nav"
+import Footer from "../components/footer"
 import styles from "../styles/components/blog_post.module.scss"
 
 export default function BlogPost({ data }) {
@@ -9,14 +12,54 @@ export default function BlogPost({ data }) {
     <>
       <Nav />
       <section className={styles.blog_article_wrap}>
-        <h1 className={styles.blog_article_title}>{post.frontmatter.title}</h1>
-        <p className={styles.blog_article_date}>{post.frontmatter.date}</p>
+        <img
+          src={post.frontmatter.featuredImg.childImageSharp.fluid.originalImg}
+          className={styles.blog_img}
+          alt="project-preview"
+        />
+        <div className={styles.top_row}>
+          <h1 className={styles.blog_article_title}>
+            {post.frontmatter.title}
+          </h1>
+          <div className={styles.details_wrap}>
+            <p className={styles.blog_article_date}>{post.frontmatter.date}</p>
+            <p>
+              <a
+                className={styles.project_ext_link}
+                href={post.frontmatter.github}
+              >
+                Code Repo
+              </a>
+              <a
+                className={styles.project_ext_link}
+                href={post.frontmatter.liveLink}
+              >
+                Live Site
+              </a>
+            </p>
+          </div>
+        </div>
         <div
           dangerouslySetInnerHTML={{ __html: post.html }}
           className={styles.blog_post_body}
         />
-        <button>Back to Blog</button>
+        <p className={styles.built_with}>This project was built with:</p>
+        <ul className={styles.project_stack}>
+          {post.frontmatter.tags.map((tag, i) => (
+            <li className={styles.project_stack_item} key={i}>
+              {tag}
+            </li>
+          ))}
+        </ul>
+        <div className={styles.more_projects}>
+          <a href="/projects">
+            <button>
+              View All Projects <FontAwesomeIcon icon={faAngleDoubleRight} />
+            </button>
+          </a>
+        </div>
       </section>
+      <Footer />
     </>
   )
 }
@@ -26,8 +69,22 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
+        description
         date
+        icon
+        title
+        post_type
+        github
+        liveLink
+        tags
+        featuredImg {
+          publicURL
+          childImageSharp {
+            fluid {
+              originalImg
+            }
+          }
+        }
       }
     }
   }

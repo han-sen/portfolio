@@ -13,3 +13,5 @@ tags:
   - HTML
   - Canvas
 ---
+
+A short run-based text game in the browser. Try and survive the alien fleet. Battle results are determined by randomly generated player and enemy stats, and the player has the option to rest and regain health once per run, at the expense of the enemy fleet gaining one new member.

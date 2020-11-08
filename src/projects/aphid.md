@@ -14,4 +14,4 @@ tags:
   - Redux
 ---
 
-# This is where I'll talk about Archer's Island.
+This is where I'll talk about Archer's Island.

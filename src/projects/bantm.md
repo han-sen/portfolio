@@ -13,3 +13,5 @@ tags:
   - Firebase
   - Express
 ---
+
+Bantm is a twitter/tumblr clone where users can create/customize profiles and add images/text posts. This project was a chance for me to learn the basics of authentication (Firebase Auth), and file uploading (Firestore). It was built using the FERN stack (Firebase, Express, React, Node).

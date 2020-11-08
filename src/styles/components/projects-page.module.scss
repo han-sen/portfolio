@@ -14,7 +14,7 @@
 }
 
 .projects_header {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .projects_wrap_inner {
@@ -72,4 +72,28 @@
 
 .project_ext_link:hover {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .projects_wrap_inner {
+    padding: 0;
+  }
+  .projects_header {
+    margin: 1rem;
+  }
+  .project_stub_wrap {
+    flex-direction: column;
+    margin: 2rem 1rem;
+  }
+  .project_stub_img {
+    max-width: 100%;
+  }
+  .text_wrap {
+    max-width: 100%;
+    padding-top: 1rem;
+    margin: 0;
+  }
+  .top_row {
+    padding-bottom: 0.5rem;
+  }
 }
