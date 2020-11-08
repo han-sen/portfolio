@@ -23,7 +23,7 @@ export default function Nav() {
         </button>
         <div className={styles.dropdown_link_wrap}>
           <a href="/projects">Projects</a>
-          <a href="#about">About</a>
+          <a href="/about">About</a>
         </div>
       </nav>
     </section>

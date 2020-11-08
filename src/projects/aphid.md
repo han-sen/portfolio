@@ -4,9 +4,9 @@ date: "10-20-2020"
 post_type: "project"
 feature: false
 description: "A bug-tracking dashboard to help catalog open site issues."
-github: "https://github.com/han-sen/archers-island"
-liveLink: "https://han-sen.github.io/archers-island/"
-featuredImg: "../assets/img/archers_island_1.png"
+github: "https://github.com/han-sen/aphid"
+liveLink: "https://han-sen.github.io/aphid/"
+featuredImg: "../assets/img/aphid.png"
 icon: "faGlobe"
 tags:
   - React
@@ -14,4 +14,4 @@ tags:
   - Redux
 ---
 
-This is where I'll talk about Archer's Island.
+Aphid is bug-tracking dashboard to help catalog open site issues. This project is currently in demo-mode while I build out user registration features.

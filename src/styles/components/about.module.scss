@@ -158,6 +158,13 @@
     margin: 0 2rem;
   }
   .section_header_wrap {
-    margin: 4rem 2rem;
+    width: 100%;
+    margin: 4rem 0rem;
+  }
+  .header_decoration {
+    display: none;
+  }
+  .about_header::after {
+    display: none;
   }
 }

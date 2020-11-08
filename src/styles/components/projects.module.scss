@@ -117,18 +117,22 @@
 .project_image_wrap {
   box-shadow: variables.$shadow-full;
   width: 26rem;
-  transition: all 0.2s ease-in-out;
+  // transition: all 0.2s ease-in-out;
 }
 
-.project_image_wrap:hover {
-  filter: brightness(50%) !important;
-}
+// .project_image_wrap:hover {
+//   filter: brightness(50%) !important;
+// }
 
 .project_title {
   font-weight: 700;
   font-size: 1.2rem;
   margin: 1.5rem 0 1rem 0;
   color: variables.$white;
+}
+
+.project_title:hover {
+  color: variables.$green;
 }
 
 .project_desc {
@@ -187,5 +191,13 @@ button:hover {
   }
   .header_decoration {
     display: none;
+  }
+  .project_header::after {
+    display: none;
+  }
+  .section_header_wrap {
+    width: 100%;
+    margin: 4rem 0;
+    justify-content: flex-start;
   }
 }
