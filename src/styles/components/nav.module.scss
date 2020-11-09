@@ -37,6 +37,10 @@ nav {
   margin: 0 1rem;
 }
 
+.dropdown_link_wrap > a:hover {
+  color: variables.$green;
+}
+
 .dropdown_toggle {
   display: none;
 }

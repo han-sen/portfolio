@@ -1,6 +1,6 @@
 # 🚧 UNDER CONSTRUCTION 🚧
 
-🏗️ Future portfolio site in progress
+This is the repo for my personal portfolio site: mikehansen.io
 
 ## This site is built with:
 
