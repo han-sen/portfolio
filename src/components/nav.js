@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styles from "../styles/components/nav.module.scss"
-import Logo from "../assets/img/logo.png"
+import Logo from "../assets/img/logo.svg"
 
 export default function Nav() {
   const [navOpened, setNavOpened] = useState(false)
