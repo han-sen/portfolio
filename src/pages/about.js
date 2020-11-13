@@ -6,7 +6,7 @@ import imageUrl from "../assets/img/unnamed.jpg"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
 import TechStack from "../components//tech-stack"
-import AboutHeader from "../components//about-header"
+import SectionHeader from "../components/section-header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
 
@@ -20,7 +20,7 @@ export default function AboutMe() {
     <>
       <Nav />
       <section className={styles.about_wrap} id="about">
-        <AboutHeader />
+        <SectionHeader sectionTitle="ABOUT" number="002" />
         <a.div
           className={styles.about_inner}
           ref={targetRef}

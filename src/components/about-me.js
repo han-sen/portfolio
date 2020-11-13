@@ -4,7 +4,7 @@ import useIsInViewport from "use-is-in-viewport"
 import styles from "../styles/components/about.module.scss"
 import imageUrl from "../assets/img/unnamed.jpg"
 import TechStack from "./tech-stack"
-import AboutHeader from "./about-header"
+import SectionHeader from "./section-header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
 
@@ -16,7 +16,7 @@ export default function AboutMe() {
   })
   return (
     <section className={styles.about_wrap} id="about">
-      <AboutHeader />
+      <SectionHeader sectionTitle="ABOUT" number="002" />
       <a.div
         className={styles.about_inner}
         ref={targetRef}

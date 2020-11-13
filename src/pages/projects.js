@@ -4,6 +4,7 @@ import { useSpring, a, config } from "react-spring"
 import useIsInViewport from "use-is-in-viewport"
 import Nav from "../components/nav"
 import ProjectCategory from "../components/project-category"
+import SectionHeader from "../components/section-header"
 import Footer from "../components/footer"
 import styles from "../styles/components/projects-page.module.scss"
 
@@ -21,8 +22,9 @@ export default function Projects({ data }) {
         ref={targetRef}
         style={{ opacity: opacity }}
       >
+        <SectionHeader sectionTitle="PROJECTS" number="001" />
+
         <div className={styles.projects_wrap_inner}>
-          <h1 className={styles.projects_header}>PROJECTS</h1>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id} className={styles.project_stub_wrap}>
               <img
