@@ -116,6 +116,12 @@
   }
 }
 
+button:hover {
+  cursor: pointer;
+  color: variables.$green;
+  border: 1px solid variables.$green;
+}
+
 @media screen and (max-width: 768px) {
   .about_inner {
     flex-direction: column;

@@ -64,6 +64,35 @@
   // transition: all 0.2s ease-in-out;
 }
 
+.project_image_inner_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: variables.$normal-gradient-opaque;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  p {
+    color: variables.$white;
+    font-family: variables.$font-accent;
+    font-size: 0.8rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.125rem;
+    background: variables.$black-med;
+    box-shadow: variables.$shadow-full;
+    transform: translateY(80px);
+    transition: all 0.4s ease-in-out;
+  }
+}
+
+.project_image_inner_wrap:hover {
+  opacity: 1;
+  p {
+    transform: translateY(0px);
+  }
+}
+
 .project_title {
   font-weight: 700;
   font-size: 1.2rem;

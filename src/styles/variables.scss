@@ -49,6 +49,12 @@ $normal-gradient: linear-gradient(
   rgba(37, 75, 201, 1) 100%
 );
 
+$normal-gradient-opaque: linear-gradient(
+  120deg,
+  rgb(128 232 201 / 0.75) 0%,
+  rgb(37 75 201 / 0.75) 100%
+);
+
 /*** FONTS ***/
 $font-stack: "Roboto", sans-serif;
 $font-accent: "Fira Mono", monospace;

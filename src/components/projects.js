@@ -33,6 +33,7 @@ export default function Projects(props) {
                     node.frontmatter.featuredImg.childImageSharp.fluid
                       .originalImg
                   }
+                  link={node.fields.slug}
                 />
                 <div className={styles.project_details_wrap}>
                   <div className={styles.project_icon_wrap}>

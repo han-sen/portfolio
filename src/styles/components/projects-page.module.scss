@@ -33,6 +33,10 @@
   color: variables.$white;
 }
 
+.project_link:hover {
+  color: variables.$green;
+}
+
 .project_date {
   font-family: variables.$font-accent;
   color: variables.$grey-med;
