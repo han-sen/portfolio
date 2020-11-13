@@ -11,7 +11,7 @@ import styles from "../styles/components/projects-page.module.scss"
 export default function Projects({ data }) {
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
   const { opacity } = useSpring({
-    opacity: isInViewport ? 1 : 0,
+    opacity: isInViewport ? 1 : 0.5,
     config: config.molasses,
   })
   return (
@@ -23,7 +23,6 @@ export default function Projects({ data }) {
         style={{ opacity: opacity }}
       >
         <SectionHeader sectionTitle="PROJECTS" number="001" />
-
         <div className={styles.projects_wrap_inner}>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id} className={styles.project_stub_wrap}>

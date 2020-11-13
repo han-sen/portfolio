@@ -7,11 +7,12 @@ import TechStack from "./tech-stack"
 import SectionHeader from "./section-header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 
 export default function AboutMe() {
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
   const { opacity } = useSpring({
-    opacity: isInViewport ? 1 : 0,
+    opacity: isInViewport ? 1 : 0.4,
     config: config.molasses,
   })
   return (
@@ -44,6 +45,13 @@ export default function AboutMe() {
           <img className={styles.about_image} src={imageUrl} alt="profile" />
         </div>
       </a.div>
+      <div className={styles.more_about}>
+        <a href="/about">
+          <button>
+            More About Me <FontAwesomeIcon icon={faAngleDoubleRight} />
+          </button>
+        </a>
+      </div>
       <div className={styles.built_wrap}>
         <p>
           <FontAwesomeIcon icon={faGlobeAmericas} /> This site was built with

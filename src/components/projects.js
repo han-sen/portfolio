@@ -12,7 +12,7 @@ import SectionHeader from "./section-header"
 export default function Projects(props) {
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
   const { opacity } = useSpring({
-    opacity: isInViewport ? 1 : 0,
+    opacity: isInViewport ? 1 : 0.4,
     config: config.molasses,
   })
   return (

@@ -6,9 +6,8 @@ import imageUrl from "../assets/img/unnamed.jpg"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
 import TechStack from "../components//tech-stack"
+import Uses from "../components/uses"
 import SectionHeader from "../components/section-header"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
 
 export default function AboutMe() {
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
@@ -19,13 +18,13 @@ export default function AboutMe() {
   return (
     <>
       <Nav />
-      <section className={styles.about_wrap} id="about">
+      <a.section
+        className={styles.about_wrap}
+        ref={targetRef}
+        style={{ opacity: opacity }}
+      >
         <SectionHeader sectionTitle="ABOUT" number="002" />
-        <a.div
-          className={styles.about_inner}
-          ref={targetRef}
-          style={{ opacity: opacity }}
-        >
+        <div className={styles.about_page_inner}>
           <div className={styles.about_text_wrap}>
             <p>
               <span role="img" aria-label="peace sign">
@@ -48,14 +47,9 @@ export default function AboutMe() {
           <div className={styles.about_image_wrap}>
             <img className={styles.about_image} src={imageUrl} alt="profile" />
           </div>
-        </a.div>
-        <div className={styles.built_wrap}>
-          <p>
-            <FontAwesomeIcon icon={faGlobeAmericas} /> This site was built with
-            React, Three.js, Gatsby, & deployed on Netlify.
-          </p>
         </div>
-      </section>
+        <Uses />
+      </a.section>
       <Footer />
     </>
   )

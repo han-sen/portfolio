@@ -5,7 +5,7 @@ import styles from "../styles/components/about.module.scss"
 
 export default function TechStack() {
   const techOne = ["Node", "Express", "React", "Mongo"]
-  const techTwo = ["Firebase", "HTML", "CSS", "Git"]
+  const techTwo = ["Firebase", "HTML", "SCSS", "Git"]
 
   return (
     <div className={styles.tech_stack_wrap}>

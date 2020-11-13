@@ -11,14 +11,14 @@
   justify-content: center;
   align-items: center;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 8rem auto;
 }
 
 .projects_inner_wrap {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: variables.$container-indent;
 }
 

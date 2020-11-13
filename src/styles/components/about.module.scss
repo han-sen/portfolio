@@ -10,7 +10,14 @@
   display: flex;
   justify-content: space-between;
   max-width: variables.$container-indent;
-  margin: 0 auto;
+  margin: 8rem auto 2rem auto;
+}
+
+.about_page_inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: variables.$container-indent;
+  margin: 8rem auto 2rem auto;
 }
 
 .about_text_wrap {
@@ -62,10 +69,50 @@
   p {
     font-family: "Fira Mono";
     font-size: 0.8rem;
-    border: 1px solid #aabcd0;
+    // border: 1px solid #aabcd0;
     padding: 1rem;
     border-radius: 0.125rem;
     color: #f9f9f9;
+  }
+}
+
+.uses_wrap {
+  max-width: variables.$container-indent;
+  margin: 0 auto;
+  line-height: 1.5;
+  h2 {
+    margin-bottom: 2rem;
+  }
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  svg {
+    opacity: 0.5;
+  }
+}
+
+.uses_segment {
+  margin-bottom: 1rem;
+}
+
+.uses_detail {
+  font-family: variables.$font-accent;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.more_about {
+  display: flex;
+  justify-content: center;
+  button {
+    padding: 1rem 1rem;
+    background: variables.$black-med;
+    border: 1px solid variables.$grey-med;
+    color: variables.$white;
+    font-family: variables.$font-accent;
+    box-shadow: variables.$shadow-low;
+    margin-top: 2rem;
+    border-radius: 0.25rem;
   }
 }
 
