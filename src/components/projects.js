@@ -7,7 +7,7 @@ import styles from "../styles/components/projects.module.scss"
 import ProjectCategory from "./project-category"
 import ProjectLinks from "./project-links"
 import ProjectImage from "./project-image"
-import ProjectHeader from "./project-header"
+import SectionHeader from "./section-header"
 
 export default function Projects(props) {
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
@@ -17,7 +17,7 @@ export default function Projects(props) {
   })
   return (
     <section className={styles.projects_outer_wrap}>
-      <ProjectHeader />
+      <SectionHeader sectionTitle="PROJECTS" number="001" />
       <a.div
         className={styles.projects_inner_wrap}
         ref={targetRef}

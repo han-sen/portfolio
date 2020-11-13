@@ -1,0 +1,51 @@
+@use "../variables";
+
+.section_header_outer_wrap {
+  width: 100%;
+  margin: 4rem 0;
+}
+
+.section_header_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: variables.$container;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header_decoration {
+  // width: 75%;
+  //   flex: 1;
+  height: 1px;
+  background: #333131;
+}
+
+.project_header {
+  margin-right: 1rem;
+  color: variables.$grey-lite;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+}
+
+.number {
+  margin-top: -3rem;
+  font-size: 0.8rem;
+  font-family: variables.$font-accent;
+  color: grey;
+  opacity: 0.5;
+}
+
+.number::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  background: variables.$black-med;
+  margin-top: 0;
+  border: 1px solid #7c7d80;
+  display: block;
+  bottom: 1.25rem;
+}
