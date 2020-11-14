@@ -1,4 +1,4 @@
-💽 This is the repo for my personal portfolio site: [mikehansen.io](https://wwww.mikehansen.io)
+💽 This is the repo for my personal portfolio site: [mikehansen.io](https://www.mikehansen.io)
 
 ## This site is built with:
 

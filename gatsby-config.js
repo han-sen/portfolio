@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: [
     // `gatsby-plugin-sass`,
+
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
@@ -26,6 +27,12 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-FNS8H3YB5V"],
       },
     },
   ],
