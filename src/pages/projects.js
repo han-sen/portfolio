@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { useSpring, a, config } from "react-spring"
 import useIsInViewport from "use-is-in-viewport"
@@ -11,7 +11,7 @@ import styles from "../styles/components/projects-page.module.scss"
 export default function Projects({ data }) {
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
   const { opacity } = useSpring({
-    opacity: isInViewport ? 1 : 0.5,
+    opacity: isInViewport ? 1 : 0,
     config: config.molasses,
   })
   return (

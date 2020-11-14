@@ -17,7 +17,7 @@ export default function AboutMe() {
   })
   return (
     <section className={styles.about_wrap} id="about">
-      <SectionHeader sectionTitle="ABOUT" number="002" />
+      <SectionHeader sectionTitle="ABOUT" number="002" animated={true} />
       <a.div
         className={styles.about_inner}
         ref={targetRef}

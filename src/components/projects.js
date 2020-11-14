@@ -17,7 +17,7 @@ export default function Projects(props) {
   })
   return (
     <section className={styles.projects_outer_wrap}>
-      <SectionHeader sectionTitle="PROJECTS" number="001" />
+      <SectionHeader sectionTitle="PROJECTS" number="001" animated={true} />
       <a.div
         className={styles.projects_inner_wrap}
         ref={targetRef}

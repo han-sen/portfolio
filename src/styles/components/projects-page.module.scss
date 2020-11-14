@@ -81,15 +81,20 @@
 }
 
 @media screen and (max-width: 768px) {
+  .projects_wrap {
+    margin: 0 1rem;
+    padding-top: 2rem;
+  }
   .projects_wrap_inner {
     padding: 0;
+    margin-top: 0;
   }
   .projects_header {
     margin: 1rem;
   }
   .project_stub_wrap {
     flex-direction: column;
-    margin: 2rem 1rem;
+    margin: 2rem auto;
   }
   .project_stub_img {
     max-width: 100%;

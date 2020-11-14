@@ -16,7 +16,7 @@ export default function SectionHeader(props) {
         <a.div
           className={styles.header_decoration}
           ref={targetRef}
-          style={{ flexBasis: width }}
+          style={props.animated ? { flexBasis: width } : { flexBasis: "100%" }}
         ></a.div>
         <span className={styles.number}>{props.number}</span>
       </div>
