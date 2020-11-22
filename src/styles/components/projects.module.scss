@@ -16,6 +16,7 @@
 
 .projects_inner_wrap {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   margin: 2rem auto;
@@ -44,6 +45,7 @@
   box-shadow: variables.$shadow-full;
   border-radius: 0.25rem;
   text-shadow: variables.$text-shadow;
+  flex: 1;
 }
 
 .project_icon_wrap {
@@ -60,7 +62,7 @@
 
 .project_image_wrap {
   box-shadow: variables.$shadow-full;
-  width: 26rem;
+  min-width: 16rem;
   // transition: all 0.2s ease-in-out;
 }
 

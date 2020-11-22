@@ -2,7 +2,7 @@
 title: "Bantm"
 date: "10-04-2020"
 post_type: "project"
-feature: true
+feature: false
 description: "Social media app where users can share messages & customize their page."
 github: "https://github.com/han-sen/bantm_client"
 liveLink: "https://bantm-5ac5e.web.app/"
