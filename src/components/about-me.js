@@ -1,6 +1,4 @@
 import React from "react"
-import { useSpring, a, config } from "react-spring"
-import useIsInViewport from "use-is-in-viewport"
 import styles from "../styles/components/about.module.scss"
 import imageUrl from "../assets/img/unnamed.jpg"
 import TechStack from "./tech-stack"
@@ -10,19 +8,10 @@ import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 
 export default function AboutMe() {
-  const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
-  const { opacity } = useSpring({
-    opacity: isInViewport ? 1 : 0.4,
-    config: config.molasses,
-  })
   return (
     <section className={styles.about_wrap} id="about">
       <SectionHeader sectionTitle="ABOUT" number="002" animated={true} />
-      <a.div
-        className={styles.about_inner}
-        ref={targetRef}
-        style={{ opacity: opacity }}
-      >
+      <div className={styles.about_inner}>
         <div className={styles.about_text_wrap}>
           <p>
             <span role="img" aria-label="peace sign">
@@ -44,7 +33,7 @@ export default function AboutMe() {
         <div className={styles.about_image_wrap}>
           <img className={styles.about_image} src={imageUrl} alt="profile" />
         </div>
-      </a.div>
+      </div>
       <div className={styles.more_about}>
         <a href="/about">
           <button>

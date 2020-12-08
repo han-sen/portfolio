@@ -1,6 +1,4 @@
 import React from "react"
-import { useSpring, a, config } from "react-spring"
-import useIsInViewport from "use-is-in-viewport"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 import styles from "../styles/components/projects.module.scss"
@@ -10,19 +8,10 @@ import ProjectImage from "./project-image"
 import SectionHeader from "./section-header"
 
 export default function Projects(props) {
-  const [isInViewport, targetRef] = useIsInViewport({ threshold: 20 })
-  const { opacity } = useSpring({
-    opacity: isInViewport ? 1 : 0.4,
-    config: config.molasses,
-  })
   return (
     <section className={styles.projects_outer_wrap}>
       <SectionHeader sectionTitle="PROJECTS" number="001" animated={true} />
-      <a.div
-        className={styles.projects_inner_wrap}
-        ref={targetRef}
-        style={{ opacity: opacity }}
-      >
+      <div className={styles.projects_inner_wrap}>
         {props.data.allMarkdownRemark.edges
           .filter(({ node }) => node.frontmatter.feature)
           .map(({ node }, i) => (
@@ -60,7 +49,7 @@ export default function Projects(props) {
               </div>
             </div>
           ))}
-      </a.div>
+      </div>
       <div className={styles.more_projects}>
         <a href="/projects">
           <button>
