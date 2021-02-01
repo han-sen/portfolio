@@ -30,6 +30,7 @@ export default function Projects(props) {
                     <ProjectLinks
                       github={node.frontmatter.github}
                       liveLink={node.frontmatter.liveLink}
+                      title={node.frontmatter.title}
                     />
                   </div>
                   <h3 className={styles.project_title}>

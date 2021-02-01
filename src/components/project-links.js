@@ -7,10 +7,18 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons"
 export default function ProjectLinks(props) {
   return (
     <div className={styles.project_links}>
-      <a href={props.github} className={styles.project_links_item}>
+      <a
+        aria-label={props.title}
+        href={props.github}
+        className={styles.project_links_item}
+      >
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a href={props.liveLink} className={styles.project_links_item}>
+      <a
+        aria-label={props.title}
+        href={props.liveLink}
+        className={styles.project_links_item}
+      >
         <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
       </a>
     </div>

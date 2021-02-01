@@ -13,12 +13,17 @@ export default function Header(props) {
         Front-End Dev && some: <CycleText />
       </div>
       <div className={styles.header_link_wrap}>
-        <a href="https://github.com/han-sen" className={styles.header_link}>
+        <a
+          href="https://github.com/han-sen"
+          className={styles.header_link}
+          aria-label="github"
+        >
           <FontAwesomeIcon icon={faGithub} />
         </a>
         <a
           href="https://www.linkedin.com/in/mikehansendev/"
           className={styles.header_link}
+          aria-label="linkedin"
         >
           <FontAwesomeIcon icon={faLinkedin} />
         </a>

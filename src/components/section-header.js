@@ -18,7 +18,9 @@ export default function SectionHeader(props) {
           ref={targetRef}
           style={props.animated ? { flexBasis: width } : { flexBasis: "100%" }}
         ></a.div>
-        <span className={styles.number}>{props.number}</span>
+        <span className={styles.number} role="presentation">
+          {props.number}
+        </span>
       </div>
     </div>
   )
