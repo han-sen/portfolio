@@ -8,7 +8,7 @@ export default function Blog({ data }) {
   return (
     <>
       <Nav />
-      {data.allMarkdownRemark.edges.map(({ node }) => (
+      {data.allMdx.edges.map(({ node }) => (
         <div key={node.id} className={styles.blog_article_wrap}>
           <h3>
             <a className={styles.blog_link} href={node.fields.slug}>
@@ -26,7 +26,7 @@ export default function Blog({ data }) {
 
 export const query = graphql`
   query BlogQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: { frontmatter: { post_type: { eq: "blog" } } }
       sort: { fields: frontmatter___date }
     ) {
@@ -38,7 +38,7 @@ export const query = graphql`
             title
             post_type
           }
-          html
+          body
           excerpt
           fields {
             slug

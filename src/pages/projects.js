@@ -13,7 +13,7 @@ export default function Projects({ data }) {
       <section className={styles.projects_wrap}>
         <SectionHeader sectionTitle="PROJECTS" number="001" />
         <div className={styles.projects_wrap_inner}>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+          {data.allMdx.edges.map(({ node }) => (
             <div key={node.id} className={styles.project_stub_wrap}>
               <img
                 src={
@@ -61,7 +61,7 @@ export default function Projects({ data }) {
 
 export const query = graphql`
   query ProjectsQuery {
-    allMarkdownRemark(
+    allMdx(
       filter: { frontmatter: { post_type: { eq: "project" } } }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
@@ -85,7 +85,7 @@ export const query = graphql`
               }
             }
           }
-          html
+          body
           excerpt
           fields {
             slug

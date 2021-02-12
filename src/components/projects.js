@@ -12,7 +12,7 @@ export default function Projects(props) {
     <section className={styles.projects_outer_wrap}>
       <SectionHeader sectionTitle="PROJECTS" number="001" animated={true} />
       <div className={styles.projects_inner_wrap}>
-        {props.data.allMarkdownRemark.edges
+        {props.data.allMdx.edges
           .filter(({ node }) => node.frontmatter.feature)
           .map(({ node }, i) => (
             <div className={styles.project_wrap} key={i}>
