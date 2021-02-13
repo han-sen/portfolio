@@ -1,0 +1,45 @@
+---
+title: "Reisa"
+date: "02-18-2021"
+post_type: "project"
+feature: false
+description: "A short platforming game developed with the Pico-8 retro game engine."
+github: "https://github.com/han-sen/archers-island"
+liveLink: "https://han-sen.github.io/archers-island/"
+featuredImg: "../assets/img/archers_island_1.png"
+icon: "faGamepad"
+tags:
+  - Lua
+  - Pico-8
+---
+
+import Pico8 from "react-pico-8"
+
+import {
+  Controls,
+  Reset,
+  Pause,
+  Sound,
+  Carts,
+  Fullscreen,
+} from "react-pico-8/buttons"
+
+Reisa is a short platforming game developed with the Pico-8 retro game engine.
+
+<Pico8
+  src="/reisa.js"
+  autoPlay={true}
+  legacyButtons={false}
+  hideCursor={false}
+  center={true}
+  blockKeys={true}
+  usePointer={true}
+  unpauseOnReset={true}
+>
+  <Controls />
+  <Reset />
+  <Pause />
+  <Sound />
+  <Carts />
+  <Fullscreen />
+</Pico8>

@@ -64,6 +64,14 @@
     line-height: 1.5rem;
     margin-top: 1rem;
   }
+  canvas {
+    margin: 2rem;
+  }
+  canvas,
+  button {
+    max-width: 512px !important;
+    max-height: 512px !important;
+  }
 }
 
 .project_stack {

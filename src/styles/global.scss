@@ -28,3 +28,9 @@ button:focus {
 canvas:focus {
   outline: 0;
 }
+
+#p8_container {
+  max-width: 512px !important;
+  max-height: 512px !important;
+  margin: 2rem;
+}
