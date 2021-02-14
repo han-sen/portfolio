@@ -29,8 +29,19 @@ canvas:focus {
   outline: 0;
 }
 
+/*** pico 8 overrides ***/
+
 #p8_container {
   max-width: 512px !important;
   max-height: 512px !important;
-  margin: 2rem;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.css-eyihk3 {
+  margin-left: 0 !important;
+}
+
+.css-1xyuy13 {
+  display: inline-block !important;
 }
