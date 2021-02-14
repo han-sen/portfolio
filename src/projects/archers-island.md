@@ -1,6 +1,6 @@
 ---
 title: "Archer's Island"
-date: "07-18-2020"
+date: "2020-07-18"
 post_type: "project"
 feature: true
 description: "A canvas-based archery contest where players battle for the last piece of land."

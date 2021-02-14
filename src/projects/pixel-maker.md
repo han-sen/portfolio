@@ -1,6 +1,6 @@
 ---
 title: "Pixel Art Maker"
-date: "05-13-2020"
+date: "2020-05-13"
 post_type: "project"
 feature: false
 description: "A simple pixel art editor made with react and canvas."

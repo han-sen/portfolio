@@ -1,6 +1,6 @@
 ---
 title: "Bantm"
-date: "10-04-2020"
+date: "2020-10-04"
 post_type: "project"
 feature: false
 description: "Social media app where users can share messages & customize their page."

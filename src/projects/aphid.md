@@ -1,6 +1,6 @@
 ---
 title: "Aphid"
-date: "10-20-2020"
+date: "2020-10-20"
 post_type: "project"
 feature: true
 description: "A bug-tracking dashboard to help developers catalog open site issues."

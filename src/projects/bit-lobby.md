@@ -1,6 +1,6 @@
 ---
 title: "Bit Lobby"
-date: "09-05-2020"
+date: "2020-09-05"
 post_type: "project"
 feature: true
 description: "A real-time chat app built for code talk. Allows users to create rooms by topic."

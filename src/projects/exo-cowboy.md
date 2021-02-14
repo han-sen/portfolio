@@ -1,6 +1,6 @@
 ---
 title: "Exo Cowboy"
-date: "06-28-2020"
+date: "2020-06-28"
 post_type: "project"
 feature: false
 description: "A short run-based text game in the browser. Try and survive the alien fleet."
