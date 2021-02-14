@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
 import Nav from "../components/nav"
@@ -7,7 +8,7 @@ import Footer from "../components/footer"
 import styles from "../styles/components/blog_post.module.scss"
 
 export default function BlogPost({ data }) {
-  const post = data.markdownRemark
+  const post = data.mdx
   return (
     <>
       <Nav />
@@ -39,10 +40,13 @@ export default function BlogPost({ data }) {
             </p>
           </div>
         </div>
-        <div
+        {/* <div
           dangerouslySetInnerHTML={{ __html: post.html }}
           className={styles.blog_post_body}
-        />
+        /> */}
+        <div className={styles.blog_post_body}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </div>
         <p className={styles.built_with}>This project was built with:</p>
         <ul className={styles.project_stack}>
           {post.frontmatter.tags.map((tag, i) => (
@@ -66,8 +70,8 @@ export default function BlogPost({ data }) {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       frontmatter {
         description
         date

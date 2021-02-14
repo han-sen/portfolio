@@ -21,10 +21,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark(
-      filter: { frontmatter: {} }
-      sort: { fields: frontmatter___date }
-    ) {
+    allMdx(filter: { frontmatter: {} }, sort: { fields: frontmatter___date }) {
       edges {
         node {
           id
@@ -47,7 +44,7 @@ export const query = graphql`
               }
             }
           }
-          html
+          body
           excerpt
           fields {
             slug

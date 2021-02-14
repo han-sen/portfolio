@@ -14,8 +14,13 @@ module.exports = {
 
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+      },
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {

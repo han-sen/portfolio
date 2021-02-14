@@ -20,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
   border-bottom: 1px solid variables.$grey-dark;
 }
 
@@ -63,6 +64,11 @@
     line-height: 1.5rem;
     margin-top: 1rem;
   }
+  canvas,
+  button {
+    max-width: 512px !important;
+    max-height: 512px !important;
+  }
 }
 
 .project_stack {
@@ -72,6 +78,7 @@
   text-decoration: none;
   list-style: none;
   font-size: 0.8rem;
+  padding-top: 0.5rem;
   li {
     margin-right: 0.5rem;
   }
