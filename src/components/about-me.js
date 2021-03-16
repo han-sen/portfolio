@@ -27,7 +27,7 @@ export default function AboutMe() {
             <a href="https://www.linkedin.com/in/mikehansendev/">LinkedIn</a>,{" "}
             <a href="https://github.com/han-sen">Github</a>,{" "}
             <a href="https://codepen.io/mHansen">Codepen</a>, or reach out
-            directly via <a href="mailto:michaelandhansen@gmail.com">email</a>.
+            directly via <a href="mailto:mike@mikehansen.io">email</a>.
           </p>
         </div>
         <div className={styles.about_image_wrap}>

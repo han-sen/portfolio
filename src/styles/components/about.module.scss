@@ -29,6 +29,9 @@
   }
   a {
     color: variables.$green;
+    // text-decoration: underline;
+  }
+  a:hover {
     text-decoration: underline;
   }
 }
@@ -114,12 +117,18 @@
     margin-top: 2rem;
     border-radius: 0.25rem;
   }
+  svg {
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 button:hover {
   cursor: pointer;
   color: variables.$green;
   border: 1px solid variables.$green;
+  svg {
+    transform: rotate(90deg);
+  }
 }
 
 @media screen and (max-width: 768px) {

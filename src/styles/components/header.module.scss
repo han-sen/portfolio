@@ -26,6 +26,10 @@
   margin-right: 0.5rem;
 }
 
+.header_link:hover {
+  color: variables.$green;
+}
+
 .cycle_text {
   color: variables.$green;
   position: relative;

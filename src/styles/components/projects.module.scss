@@ -28,7 +28,7 @@
   max-width: variables.$container;
   margin: 2rem 0;
   border-radius: 0.25rem;
-  border: 1px solid rgb(52 49 49);
+  border: 1px solid variables.$grey-border;
   box-shadow: variables.$shadow-low;
   overflow: hidden;
 }
@@ -39,6 +39,7 @@
 }
 
 .project_details_wrap {
+  position: relative;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -46,6 +47,20 @@
   border-radius: 0.25rem;
   text-shadow: variables.$text-shadow;
   flex: 1;
+}
+
+.project_details_wrap::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-left: 1px solid variables.$grey-border;
+  border-top: 1px solid variables.$grey-border;
+  position: absolute;
+  display: block;
+  background: transparent;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.125rem 0 0 0;
 }
 
 .project_icon_wrap {
@@ -58,6 +73,10 @@
 .project_links_item {
   margin-left: 0.5rem;
   color: variables.$grey-med;
+}
+
+.project_links_item:hover {
+  color: variables.$green;
 }
 
 .project_image_wrap {
@@ -138,6 +157,15 @@
     box-shadow: variables.$shadow-low;
     margin-top: 2rem;
     border-radius: 0.25rem;
+  }
+  svg {
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.more_projects:hover {
+  svg {
+    transform: rotate(90deg);
   }
 }
 
