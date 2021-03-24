@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
+import AnimatedLink from "../components/anim-link"
 import Nav from "../components/nav"
 import Footer from "../components/footer"
 import styles from "../styles/components/blog_post.module.scss"
@@ -56,11 +57,11 @@ export default function BlogPost({ data }) {
           ))}
         </ul>
         <div className={styles.more_projects}>
-          <a href="/projects">
+          <AnimatedLink link="/projects">
             <button>
               View All Projects <FontAwesomeIcon icon={faAngleDoubleRight} />
             </button>
-          </a>
+          </AnimatedLink>
         </div>
       </section>
       <Footer />

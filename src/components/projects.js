@@ -1,6 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons"
+import AnimatedLink from "./anim-link"
 import styles from "../styles/components/projects.module.scss"
 import ProjectCategory from "./project-category"
 import ProjectLinks from "./project-links"
@@ -34,7 +35,9 @@ export default function Projects(props) {
                     />
                   </div>
                   <h3 className={styles.project_title}>
-                    <a href={`${node.fields.slug}`}>{node.frontmatter.title}</a>
+                    <AnimatedLink link={`${node.fields.slug}`}>
+                      {node.frontmatter.title}
+                    </AnimatedLink>
                   </h3>
                   <p className={styles.project_desc}>
                     {node.frontmatter.description}
@@ -52,11 +55,11 @@ export default function Projects(props) {
           ))}
       </div>
       <div className={styles.more_projects}>
-        <a href="/projects">
+        <AnimatedLink link="/projects">
           <button>
             View All Projects <FontAwesomeIcon icon={faAngleDoubleRight} />
           </button>
-        </a>
+        </AnimatedLink>
       </div>
     </section>
   )

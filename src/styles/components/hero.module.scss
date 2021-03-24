@@ -10,7 +10,7 @@
 .hero_inner {
   position: absolute;
   display: flex;
-  top: 25%;
+  top: 5%;
   z-index: 2;
 }
 
@@ -37,7 +37,7 @@
 @media screen and (max-width: 768px) {
   .hero_inner {
     flex-direction: column;
-    top: 20%;
+    top: 5%;
     text-align: center;
   }
   .canvas_wrap {
