@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styles from "../styles/components/nav.module.scss"
+import AnimatedLink from "./anim-link"
 import Logo from "../assets/img/logo.svg"
 
 export default function Nav() {
@@ -9,9 +10,9 @@ export default function Nav() {
   return (
     <section className={styles.nav_wrap}>
       <nav className={navOpened ? styles.dropdown_opened : ""}>
-        <a className={styles.logo} href="/">
-          <img src={Logo} alt="Logo" />
-        </a>
+        <AnimatedLink link="/">
+          <img src={Logo} alt="Logo" className={styles.logo} />
+        </AnimatedLink>
         <button
           className={styles.dropdown_toggle}
           aria-hidden="true"
@@ -22,8 +23,8 @@ export default function Nav() {
           <span className={styles.burger_span}></span>
         </button>
         <div className={styles.dropdown_link_wrap}>
-          <a href="/projects">Projects</a>
-          <a href="/about">About</a>
+          <AnimatedLink link="/projects">Projects</AnimatedLink>
+          <AnimatedLink link="/about">About</AnimatedLink>
         </div>
       </nav>
     </section>

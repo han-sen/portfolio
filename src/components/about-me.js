@@ -2,6 +2,7 @@ import React from "react"
 import styles from "../styles/components/about.module.scss"
 import imageUrl from "../assets/img/unnamed.jpg"
 import TechStack from "./tech-stack"
+import AnimatedLink from "./anim-link"
 import SectionHeader from "./section-header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons"
@@ -35,11 +36,11 @@ export default function AboutMe() {
         </div>
       </div>
       <div className={styles.more_about}>
-        <a href="/about">
+        <AnimatedLink link="/about">
           <button>
             More About Me <FontAwesomeIcon icon={faAngleDoubleRight} />
           </button>
-        </a>
+        </AnimatedLink>
       </div>
       <div className={styles.built_wrap}>
         <p>

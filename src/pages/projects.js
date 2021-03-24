@@ -6,6 +6,7 @@ import SectionHeader from "../components/section-header"
 import Footer from "../components/footer"
 import ProjectLinks from "../components//project-links"
 import ProjectImage from "../components/project-image"
+import AnimatedLink from "../components/anim-link"
 // import styles from "../styles/components/projects-page.module.scss"
 import styles from "../styles/components/projects.module.scss"
 
@@ -36,7 +37,9 @@ export default function Projects({ data }) {
                     />
                   </div>
                   <h3 className={styles.project_title}>
-                    <a href={`${node.fields.slug}`}>{node.frontmatter.title}</a>
+                    <AnimatedLink link={`${node.fields.slug}`}>
+                      {node.frontmatter.title}
+                    </AnimatedLink>
                   </h3>
                   <p className={styles.project_desc}>
                     {node.frontmatter.description}
