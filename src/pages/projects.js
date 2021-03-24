@@ -4,7 +4,10 @@ import Nav from "../components/nav"
 import ProjectCategory from "../components/project-category"
 import SectionHeader from "../components/section-header"
 import Footer from "../components/footer"
-import styles from "../styles/components/projects-page.module.scss"
+import ProjectLinks from "../components//project-links"
+import ProjectImage from "../components/project-image"
+// import styles from "../styles/components/projects-page.module.scss"
+import styles from "../styles/components/projects.module.scss"
 
 export default function Projects({ data }) {
   return (
@@ -13,42 +16,39 @@ export default function Projects({ data }) {
       <section className={styles.projects_wrap}>
         <SectionHeader sectionTitle="PROJECTS" number="001" />
         <div className={styles.projects_wrap_inner}>
-          {data.allMdx.edges.map(({ node }) => (
-            <div key={node.id} className={styles.project_stub_wrap}>
-              <img
-                src={
-                  node.frontmatter.featuredImg.childImageSharp.fluid.originalImg
-                }
-                alt={node.frontmatter.title}
-                className={styles.project_stub_img}
-              />
-              <div className={styles.text_wrap}>
-                <div className={styles.top_row}>
-                  <ProjectCategory icon={node.frontmatter.icon} />
-                  <h3>
-                    <a className={styles.project_link} href={node.fields.slug}>
-                      {node.frontmatter.title}
-                    </a>
+          {data.allMdx.edges.map(({ node }, i) => (
+            <div className={styles.project_wrap} key={i}>
+              <div className={styles.project_inner}>
+                <ProjectImage
+                  url={
+                    node.frontmatter.featuredImg.childImageSharp.fluid
+                      .originalImg
+                  }
+                  link={node.fields.slug}
+                />
+                <div className={styles.project_details_wrap}>
+                  <div className={styles.project_icon_wrap}>
+                    <ProjectCategory icon={node.frontmatter.icon} />
+                    <ProjectLinks
+                      github={node.frontmatter.github}
+                      liveLink={node.frontmatter.liveLink}
+                      title={node.frontmatter.title}
+                    />
+                  </div>
+                  <h3 className={styles.project_title}>
+                    <a href={`${node.fields.slug}`}>{node.frontmatter.title}</a>
                   </h3>
-                  <p className={styles.project_date}>{node.frontmatter.date}</p>
+                  <p className={styles.project_desc}>
+                    {node.frontmatter.description}
+                  </p>
+                  <ul className={styles.project_stack}>
+                    {node.frontmatter.tags.map((tag, i) => (
+                      <li className={styles.project_stack_item} key={i}>
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className={styles.project_desc}>
-                  {node.frontmatter.description}
-                </p>
-                <p>
-                  <a
-                    className={styles.project_ext_link}
-                    href={node.frontmatter.github}
-                  >
-                    Code Repo
-                  </a>
-                  <a
-                    className={styles.project_ext_link}
-                    href={node.frontmatter.liveLink}
-                  >
-                    Live Site
-                  </a>
-                </p>
               </div>
             </div>
           ))}
@@ -62,20 +62,22 @@ export default function Projects({ data }) {
 export const query = graphql`
   query ProjectsQuery {
     allMdx(
-      filter: { frontmatter: { post_type: { eq: "project" } } }
+      filter: { frontmatter: {} }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
           id
           frontmatter {
-            description
             date
-            icon
             title
             post_type
+            description
+            feature
             github
             liveLink
+            tags
+            icon
             featuredImg {
               publicURL
               childImageSharp {
