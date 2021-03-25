@@ -1,0 +1,107 @@
+@use "../variables";
+
+.top_button {
+  position: fixed;
+  display: flex;
+  background: variables.$black-med;
+  border: 1px solid variables.$grey-med;
+  color: variables.$grey-med;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 10%;
+  right: 10%;
+  padding: 0.5rem;
+  z-index: 9999;
+  font-size: 1.2rem;
+  border-radius: 0.125rem;
+  opacity: 0;
+  animation: fade-in 1.2s cubic-bezier(0.5, 1, 0.89, 1) forwards;
+}
+
+.top_button:hover {
+  color: variables.$green;
+}
+
+.top_button::before {
+  content: "";
+  width: 0.25rem;
+  height: 0.25rem;
+  border-left: 1px solid variables.$grey-med;
+  border-top: 1px solid variables.$grey-med;
+  position: absolute;
+  display: block;
+  background: transparent;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.125rem 0 0 0;
+}
+
+.top_button::after {
+  content: "";
+  width: 1px;
+  position: absolute;
+  bottom: -2rem;
+  right: 1rem;
+  height: 2rem;
+  background: variables.$grey-med;
+  animation-delay: 0.5s;
+  animation: grow 0.5s ease-in-out forwards;
+}
+
+.text {
+  writing-mode: vertical-lr;
+  text-orientation: sideways;
+  display: none;
+}
+
+.icon {
+  color: inherit;
+  -webkit-transform: rotateY(90deg) rotateX(-15deg);
+  transform: rotateY(90deg) rotateX(-15deg);
+  -webkit-animation: turn-in 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+  animation: turn-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes turn-in {
+  from {
+    -webkit-transform: rotateY(90deg) rotateX(-15deg);
+    transform: rotateY(90deg) rotateX(-15deg);
+  }
+  to {
+    -webkit-transform: rotateY(0deg) rotateX(0deg);
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 0rem;
+  }
+  to {
+    height: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .top_button {
+    right: 5%;
+    bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top_button {
+    display: none;
+  }
+}
