@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "../styles/components/about.module.scss"
-import imageUrl from "../assets/img/unnamed.jpg"
+import imageUrl from "../assets/img/portrait.jpg"
 import TechStack from "./tech-stack"
 import AnimatedLink from "./anim-link"
 import SectionHeader from "./section-header"
@@ -18,8 +18,8 @@ export default function AboutMe() {
             <span role="img" aria-label="peace sign">
               ✌️
             </span>{" "}
-            I'm a front-end developer and designer based outside of Boston, MA.
-            I like building web apps, learning game dev, and 3D modeling.
+            I'm a UI engineer based outside of Boston, MA. I like front-end dev
+            and design, learning game dev, and 3D modeling.
           </p>
           <p>Some tech I have experience with:</p>
           <TechStack />

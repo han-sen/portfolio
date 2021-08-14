@@ -55,13 +55,13 @@
 .about_image {
   width: 100%;
   max-width: 250px;
-  border: 2px solid variables.$green;
-  filter: grayscale(0.85);
+  box-shadow: 4px 4px 0px variables.$green;
+  filter: grayscale(0.15);
   transition: filter 0.4s ease;
 }
 
 .about_image:hover {
-  filter: grayscale(0.1);
+  filter: grayscale(0.9);
 }
 
 .built_wrap {
