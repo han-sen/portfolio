@@ -55,9 +55,9 @@
 .about_image {
   width: 100%;
   max-width: 250px;
-  box-shadow: 4px 4px 0px variables.$green;
   filter: grayscale(0.15);
   transition: filter 0.4s ease;
+  box-shadow: 4px 4px 0px variables.$grey-dark;
 }
 
 .about_image:hover {

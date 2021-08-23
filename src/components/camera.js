@@ -4,7 +4,7 @@ import { extend, useFrame, useThree } from "react-three-fiber"
 
 extend({ OrbitControls })
 
-export default function CameraControls(props) {
+export default function CameraControls({ autoRotate, setAutoRotate }) {
   const {
     camera,
     gl: { domElement },
@@ -18,9 +18,9 @@ export default function CameraControls(props) {
 
   useEffect(() => {
     if (typeof window !== `undefined`) {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 1024) {
         setUserCanRotate(false)
-        props.setAutoRotate(true)
+        setAutoRotate(true)
       }
     }
   }, [])
@@ -29,7 +29,7 @@ export default function CameraControls(props) {
     <orbitControls
       ref={controls}
       args={[camera, domElement]}
-      autoRotate={props.autoRotate}
+      autoRotate={autoRotate}
       enableZoom={false}
       enableRotate={userCanRotate}
       // maxAzimuthAngle={Math.PI / 3}

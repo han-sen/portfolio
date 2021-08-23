@@ -7,7 +7,7 @@ import quoteUrl from "../assets/img/quotes.png"
 import crossUrl from "../assets/img/x-mark.png"
 import logoUrl from "../assets/img/fakeLogo.png"
 
-export default function MockUp(props) {
+export default function MockUp({ setAutoRotate }) {
   const [isBig, setIsBig] = useState(false)
   const { position } = useSpring({
     position: isBig ? [1, 0.25, 0] : [1, -2, 0],
@@ -31,8 +31,8 @@ export default function MockUp(props) {
 
   useEffect(() => {
     setIsBig(true)
-    setTimeout(() => props.setAutoRotate(true), 1000)
-  })
+    setTimeout(() => setAutoRotate(true), 1000)
+  }, [])
   return (
     <a.group position={position}>
       {/* fake logo */}

@@ -11,7 +11,12 @@ export default function Nav() {
     <section className={styles.nav_wrap}>
       <nav className={navOpened ? styles.dropdown_opened : ""}>
         <AnimatedLink link="/">
-          <img src={Logo} alt="Logo" className={styles.logo} />
+          <img
+            src={Logo}
+            alt="Logo"
+            className={styles.logo}
+            style={{ width: "3rem" }}
+          />
         </AnimatedLink>
         <button
           className={styles.dropdown_toggle}
