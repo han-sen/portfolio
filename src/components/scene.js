@@ -6,7 +6,7 @@ import Orbiters from "./orbiters"
 import styles from "../styles/components/hero.module.scss"
 
 export default function Scene() {
-  const [autoRotate, setAutoRotate] = useState(false)
+  const [autoRotate, setAutoRotate] = useState(true)
   return (
     <div className={styles.canvas_wrap}>
       {typeof window !== `undefined` && (
